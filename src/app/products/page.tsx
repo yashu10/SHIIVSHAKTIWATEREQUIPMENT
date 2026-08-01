@@ -12,8 +12,31 @@ export default function Products() {
   // Get unique categories dynamically
   const categories = ["all", ...Array.from(new Set(productsData.map((p) => p.category)))];
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shivshaktiwaterequipment.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Products",
+        "item": "https://shivshaktiwaterequipment.com/products"
+      }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Page Header */}
       <section className="page-header pattern-bg active">
         <div className="container">

@@ -13,6 +13,7 @@ interface Product {
   tagline: string;
   overview: string;
   image: string;
+  aeoAnswer?: string;
   topFeatures: string[];
   benefits: { title: string; desc: string }[];
   specs: { k: string; v: string }[];
@@ -66,7 +67,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
               <div className="main-img-wrapper" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <img
                   src={activeImage}
-                  alt={product.title}
+                  alt={`Industrial ${product.title} - Manufacturer and Exporter`}
                   id="mainImage"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
@@ -80,7 +81,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
                     key={idx}
                     src={img}
                     className={activeImage === img ? "active" : ""}
-                    alt={`Thumbnail ${idx + 1}`}
+                    alt={`Thumbnail view of ${product.title} equipment - ${idx + 1}`}
                     onClick={() => setActiveImage(img)}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
@@ -107,6 +108,22 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
               <h3 style={{ color: "var(--primary)", fontSize: "1.1rem", marginBottom: "15px", fontWeight: 500 }}>
                 {product.tagline}
               </h3>
+
+              {product.aeoAnswer && (
+                <div style={{
+                  background: "rgba(15, 39, 68, 0.05)",
+                  borderLeft: "4px solid var(--primary)",
+                  padding: "15px 20px",
+                  marginBottom: "20px",
+                  borderRadius: "4px",
+                  fontSize: "1.05rem",
+                  fontWeight: 500,
+                  color: "#333",
+                  lineHeight: 1.6
+                }}>
+                  <p style={{ margin: 0 }}>{product.aeoAnswer}</p>
+                </div>
+              )}
 
               <p>{product.overview}</p>
 

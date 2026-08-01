@@ -26,19 +26,19 @@ export async function generateMetadata(props: {
     };
   }
 
-  const imageUrl = `https://www.shivshaktiengineering.com${blog.image}`;
+  const imageUrl = `https://shivshaktiwaterequipment.com${blog.image}`;
 
   return {
     title: `${blog.title} | Blog | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
     description: blog.summary,
     alternates: {
-      canonical: `https://www.shivshaktiengineering.com/blog/${resolvedParams.slug}`,
+      canonical: `/blog/${resolvedParams.slug}`,
     },
     openGraph: {
       type: "article",
       title: blog.title,
       description: blog.summary,
-      url: `https://www.shivshaktiengineering.com/blog/${resolvedParams.slug}`,
+      url: `/blog/${resolvedParams.slug}`,
       images: [
         {
           url: imageUrl,
@@ -77,7 +77,7 @@ export default async function BlogPage(props: {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": blog.title,
-    "image": `https://www.shivshaktiengineering.com${blog.image}`,
+    "image": `https://shivshaktiwaterequipment.com${blog.image}`,
     "datePublished": blog.date || "2024-01-01",
     "dateModified": blog.date || "2024-01-01",
     "author": {
@@ -89,7 +89,7 @@ export default async function BlogPage(props: {
       "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.shivshaktiengineering.com/assets/images/shiv_shakti_logo.png"
+        "url": "https://shivshaktiwaterequipment.com/assets/images/shiv_shakti_logo.png"
       }
     },
     "description": blog.summary
@@ -103,19 +103,19 @@ export default async function BlogPage(props: {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.shivshaktiengineering.com"
+        "item": "https://shivshaktiwaterequipment.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.shivshaktiengineering.com/blog"
+        "item": "https://shivshaktiwaterequipment.com/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": blog.title,
-        "item": `https://www.shivshaktiengineering.com/blog/${resolvedParams.slug}`
+        "item": `https://shivshaktiwaterequipment.com/blog/${resolvedParams.slug}`
       }
     ]
   };

@@ -57,7 +57,8 @@
                 "k": "Control System",
                 "v": "Delta / Mitsubishi PLC with 7\" Touch Screen"
             }
-        ]
+        ],
+        "aeoAnswer": "A water filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 300 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 2000 ml."
     },
     {
         "filename": "juice-filling-machine.html",
@@ -117,7 +118,8 @@
                 "k": "Control System",
                 "v": "Touch Panel HMI Data Logging"
             }
-        ]
+        ],
+        "aeoAnswer": "A juice filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 200 Bottles Per Minute."
     },
     {
         "filename": "beer-filling-machine.html",
@@ -177,7 +179,8 @@
                 "k": "Sanitation Standard",
                 "v": "100% Steam-Sterilizable (SIP) capable"
             }
-        ]
+        ],
+        "aeoAnswer": "A beer filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 1000 to 12000 Bottles Per Hour."
     },
     {
         "filename": "soda-filling-machine.html",
@@ -237,7 +240,8 @@
                 "k": "Control System",
                 "v": "PLC with Touch Panel Interface"
             }
-        ]
+        ],
+        "aeoAnswer": "A soda filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 200 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 2000 ml."
     },
     {
         "filename": "inkjet-batch-coding.html",
@@ -297,7 +301,8 @@
                 "k": "Data Input",
                 "v": "USB interface, Ethernet, RS232"
             }
-        ]
+        ],
+        "aeoAnswer": "A inkjet batch coding is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from Up to 300 m/min (Single Line 7x5)."
     },
     {
         "filename": "sticker-labelling-machine.html",
@@ -357,7 +362,8 @@
                 "k": "Power Requirement",
                 "v": "Single Phase, 220V, 50Hz, 1.5 kW"
             }
-        ]
+        ],
+        "aeoAnswer": "A sticker labelling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 40 to 150 Bottles Per Minute."
     },
     {
         "filename": "bopp-labelling-machine.html",
@@ -417,7 +423,8 @@
                 "k": "Machine Weight",
                 "v": "Approx ~1500 KG to 3000 KG"
             }
-        ]
+        ],
+        "aeoAnswer": "A bopp labelling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 100 to 300 Bottles Per Minute."
     },
     {
         "filename": "chemical-lab.html",
@@ -477,7 +484,8 @@
                 "k": "Chemicals",
                 "v": "Initial supply of standard testing Reagents & Buffers"
             }
-        ]
+        ],
+        "aeoAnswer": "A chemical lab equipment is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency."
     },
     {
         "filename": "r-o-plant.html",
@@ -537,7 +545,8 @@
                 "k": "Disinfection Stage",
                 "v": "UV Sterilizer + Automatic Ozone System"
             }
-        ]
+        ],
+        "aeoAnswer": "A industrial r.o. plant is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 500 LPH to 50,000 LPH options."
     },
     {
         "filename": "fully-automatic-shrink-wrapping-machine.html",
@@ -597,7 +606,8 @@
                 "k": "Power Consumption",
                 "v": "3 Phase, 440V, Approx 18 kW to 24 kW"
             }
-        ]
+        ],
+        "aeoAnswer": "A fully automatic shrink wrapping machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 8 to 15 Packs (Bundles) Per Minute."
     },
     {
         "filename": "semi-automatic-shrink-wrapping-machine.html",
@@ -657,7 +667,8 @@
                 "k": "Power Input",
                 "v": "3 Phase, 440V, Approx 15 kW Elements"
             }
-        ]
+        ],
+        "aeoAnswer": "A semi automatic shrink wrapping machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 4 to 7 Packs Per Minute (Operator Dependent)."
     },
     {
         "filename": "fully-automatic-blow-moulding-machine.html",
@@ -717,7 +728,8 @@
                 "k": "Control Interface",
                 "v": "Advanced Touchscreen PLC with fault logging"
             }
-        ]
+        ],
+        "aeoAnswer": "A fully automatic blow moulding machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 2000 to 6000 Bottles Per Hour (Based on cavities). It supports pack sizes ranging from 2.0 Liters (Standard Model)."
     },
     {
         "filename": "semi-automatic-blow-moulding-machine.html",
@@ -777,7 +789,8 @@
                 "k": "Required Air",
                 "v": "High Pressure (25-30 Bar) Compressor Required"
             }
-        ]
+        ],
+        "aeoAnswer": "A semi automatic blow moulding machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 800 to 1200 Bottles Per Hour (1L Size). It supports pack sizes ranging from Options available to blow 20 Liter / 5 Gallon Jars."
     },
     {
         "filename": "milk-dairy-filling-machine.html",
@@ -837,7 +850,8 @@
                 "k": "Control System",
                 "v": "PLC with Touch Screen Interface"
             }
-        ]
+        ],
+        "aeoAnswer": "A milk & dairy filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 150 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 1000 ml."
     },
     {
         "filename": "edible-oil-filling-machine.html",
@@ -897,7 +911,8 @@
                 "k": "Control System",
                 "v": "Advanced PLC with Recipe Memory"
             }
-        ]
+        ],
+        "aeoAnswer": "A edible oil filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 120 Bottles Per Minute. It supports pack sizes ranging from 500 ml to 5000 ml (5 Liters)."
     },
     {
         "filename": "hand-wash-filling-machine.html",
@@ -957,7 +972,8 @@
                 "k": "Material of Construction",
                 "v": "SS 316L Contact Parts"
             }
-        ]
+        ],
+        "aeoAnswer": "A hand wash filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 30 to 100 Bottles Per Minute. It supports pack sizes ranging from 100 ml to 1000 ml."
     },
     {
         "filename": "chemical-pesticide-filling-machine.html",
@@ -1017,6 +1033,7 @@
                 "k": "Control System",
                 "v": "Isolated PLC Control Panel"
             }
-        ]
+        ],
+        "aeoAnswer": "A chemical & pesticide filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 80 Bottles Per Minute. It supports pack sizes ranging from 100 ml to 5000 ml."
     }
 ]

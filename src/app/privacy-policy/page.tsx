@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           <p>We implement industry-standard security measures to protect your personal information from unauthorized access.</p>
           <br />
           <h2>4. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at shivshakti2932@yahoo.com.</p>
+          <p>If you have any questions about this Privacy Policy, please contact us at contact@shivshaktiwaterequipment.com.</p>
         </div>
       </section>
     </main>

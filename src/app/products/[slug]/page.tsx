@@ -28,19 +28,19 @@ export async function generateMetadata(props: {
     };
   }
 
-  const imageUrl = `https://www.shivshaktiengineering.com/assets/images/${product.image}`;
+  const imageUrl = `https://shivshaktiwaterequipment.com/assets/images/${product.image}`;
 
   return {
     title: `${product.seoTitle} | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
     description: product.seoDesc,
     alternates: {
-      canonical: `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`,
+      canonical: `/products/${resolvedParams.slug}`,
     },
     openGraph: {
       type: "article",
       title: product.seoTitle,
       description: product.seoDesc,
-      url: `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`,
+      url: `/products/${resolvedParams.slug}`,
       images: [
         {
           url: imageUrl,
@@ -85,17 +85,12 @@ export default async function ProductPage(props: {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": product.title,
-    "image": `https://www.shivshaktiengineering.com/assets/images/${product.image}`,
+    "image": `https://shivshaktiwaterequipment.com/assets/images/${product.image}`,
     "description": product.seoDesc,
     "category": product.category,
     "brand": {
       "@type": "Brand",
       "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
     }
   };
 
@@ -107,25 +102,25 @@ export default async function ProductPage(props: {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.shivshaktiengineering.com"
+        "item": "https://shivshaktiwaterequipment.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Our Products",
-        "item": "https://www.shivshaktiengineering.com/products"
+        "item": "https://shivshaktiwaterequipment.com/products"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": product.category,
-        "item": `https://www.shivshaktiengineering.com/products#${product.category.toLowerCase().replace(/\s+/g, '-')}`
+        "item": `https://shivshaktiwaterequipment.com/products#${product.category.toLowerCase().replace(/\s+/g, '-')}`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": product.title,
-        "item": `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`
+        "item": `https://shivshaktiwaterequipment.com/products/${resolvedParams.slug}`
       }
     ]
   };

@@ -17,8 +17,36 @@ export default function About() {
     { icon: "fa-arrow-trend-up", title: "Continuous Improvement" },
   ];
 
+  const manufacturerSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "Manufacturer"],
+    "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    "url": "https://shivshaktiwaterequipment.com",
+    "logo": "https://shivshaktiwaterequipment.com/assets/images/shiv_shakti_logo.png",
+    "description": "Leading manufacturer of mineral water bottling and liquid filling machinery in India.",
+    "telephone": "+919712666160",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. B/5, Revabhai Industrial Estate, Part-2, Opp. Ishwarkrupa Weighbridge, CTM",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "postalCode": "380026",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "23.0039",
+      "longitude": "72.6366"
+    },
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 08:00-20:00"
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(manufacturerSchema) }}
+      />
       {/* Page Header */}
       <section className="page-header pattern-bg active">
         <div className="container">
@@ -154,11 +182,12 @@ export default function About() {
             <h2>
               <i className="fa-solid fa-industry"></i> Infrastructure
             </h2>
-            <p>
-              Our state-of-the-art manufacturing facility in Ahmedabad spans 15,000 square feet, equipped with
-              modern CNC machines, testing laboratories, and assembly lines. We maintain strict quality control at
-              every stage of production.
-            </p>
+            <ul style={{ listStyle: "disc", paddingLeft: "20px", marginTop: "15px", lineHeight: 1.8 }}>
+              <li><strong>Expansive Facility:</strong> State-of-the-art manufacturing plant in Ahmedabad spanning 15,000 square feet.</li>
+              <li><strong>Advanced Technology:</strong> Equipped with modern CNC machinery and dedicated assembly lines.</li>
+              <li><strong>In-House Testing:</strong> Dedicated testing laboratories for mechanical, chemical, and micro-biology validation.</li>
+              <li><strong>Quality Assurance:</strong> Strict quality control maintained at every stage of production to meet ISO and BIS standards.</li>
+            </ul>
           </div>
 
           <div className="about-content-section animate-on-scroll">

@@ -22,7 +22,7 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const baseUrl = "https://www.shivshaktiengineering.com";
+const baseUrl = "https://shivshaktiwaterequipment.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -59,9 +59,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: baseUrl,
-  },
+  alternates: {},
   icons: {
     icon: "/assets/images/fav_icon.png",
     shortcut: "/assets/images/fav_icon.png",
@@ -103,15 +101,16 @@ const jsonLdOrganization = {
       "logo": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "image": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "description": "Leading manufacturer & exporter of mineral water filling machinery, RO plants, PET blow moulding, and packaging equipment in India.",
-      "telephone": "+919712666160",
-      "email": "info@shivshaktiengineering.com",
+      "foundingDate": "1998",
+      "telephone": ["+919712666160", "+918490087773"],
+      "email": "contact@shivshaktiwaterequipment.com",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "309, Ganesh Imperial, Near Podar School, S.P. Ring Road",
+        "streetAddress": "Plot No. B/5, Revabhai Industrial Estate, Part-2, Opp. Ishwarkrupa Weighbridge, CTM",
         "addressLocality": "Ahmedabad",
         "addressRegion": "Gujarat",
-        "postalCode": "382418",
+        "postalCode": "380026",
         "addressCountry": "IN"
       },
       "geo": {
@@ -119,15 +118,26 @@ const jsonLdOrganization = {
         "latitude": "23.0225",
         "longitude": "72.5714"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+919712666160",
-        "contactType": "sales",
-        "areaServed": "Global",
-        "availableLanguage": ["en", "hi", "gu"]
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+919712666160",
+          "contactType": "sales",
+          "areaServed": "Global",
+          "availableLanguage": ["en", "hi", "gu"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+918490087773",
+          "contactType": "sales",
+          "areaServed": "Global",
+          "availableLanguage": ["en", "hi", "gu"]
+        }
+      ],
       "sameAs": [
-        "https://wa.me/919712666160"
+        "https://www.facebook.com/share/1ayi4yDzHA/?mibextid=wwXIfr",
+        "https://www.instagram.com/shivshaktiwatersolution?igsh=ZGlvanBjcGtuOXR2",
+        "https://youtube.com/@0508pradip?si=oyYaSQHBArGgwJog"
       ]
     },
     {

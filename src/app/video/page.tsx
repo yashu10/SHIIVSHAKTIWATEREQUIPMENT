@@ -75,14 +75,10 @@ export default function VideoGallery() {
   return (
     <main>
       {/* Page Header */}
-      <section className="page-header">
+      <section className="page-header pattern-bg active">
         <div className="container">
-          <ul className="breadcrumb">
-            <li><Link href="/">Home</Link></li>
-            <li>Videos</li>
-          </ul>
-          <h1>Machinery Video Gallery</h1>
-          <p>Watch our high-speed, heavy-duty industrial machinery in active operation.</p>
+          <h1 className="page-title fade-up">MACHINERY <span className="text-gradient">VIDEOS</span></h1>
+          <p className="page-subtitle fade-up delay-1">Watch our high-speed, heavy-duty industrial machinery in active operation.</p>
         </div>
       </section>
 

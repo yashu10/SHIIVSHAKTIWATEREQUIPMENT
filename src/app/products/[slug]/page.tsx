@@ -28,6 +28,8 @@ export async function generateMetadata(props: {
     };
   }
 
+  const imageUrl = `https://www.shivshaktiengineering.com/assets/images/${product.image}`;
+
   return {
     title: `${product.seoTitle} | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
     description: product.seoDesc,
@@ -38,12 +40,19 @@ export async function generateMetadata(props: {
       type: "article",
       title: product.seoTitle,
       description: product.seoDesc,
+      url: `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`,
       images: [
         {
-          url: `https://www.shivshaktiengineering.com/assets/images/${product.image}`,
+          url: imageUrl,
           alt: product.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.seoTitle,
+      description: product.seoDesc,
+      images: [imageUrl],
     },
   };
 }
@@ -60,25 +69,81 @@ export default async function ProductPage(props: {
     notFound();
   }
 
-  // Get related products (same category, or just other products, max 4)
   const relatedProducts = productsData
     .filter((p) => p.filename !== product.filename)
-    .filter((p) => p.category === product.category || p.category.includes("Filling"))
-    .slice(0, 4);
+    .filter((p) => p.category === product.category || p.category.includes("Filling"));
 
-  // If we don't have enough, fill with other products
-  if (relatedProducts.length < 4) {
+  if (relatedProducts.length < 3) {
     const filledFilenames = new Set(relatedProducts.map((rp) => rp.filename));
     const extraProducts = productsData
       .filter((p) => p.filename !== product.filename && !filledFilenames.has(p.filename))
-      .slice(0, 4 - relatedProducts.length);
+      .slice(0, 3 - relatedProducts.length);
     relatedProducts.push(...extraProducts);
   }
 
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.title,
+    "image": `https://www.shivshaktiengineering.com/assets/images/${product.image}`,
+    "description": product.seoDesc,
+    "category": product.category,
+    "brand": {
+      "@type": "Brand",
+      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.shivshaktiengineering.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Products",
+        "item": "https://www.shivshaktiengineering.com/products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.category,
+        "item": `https://www.shivshaktiengineering.com/products#${product.category.toLowerCase().replace(/\s+/g, '-')}`
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": product.title,
+        "item": `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`
+      }
+    ]
+  };
+
   return (
-    <ProductDetailClient
-      product={product}
-      relatedProducts={relatedProducts}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <ProductDetailClient
+        product={product}
+        relatedProducts={relatedProducts}
+      />
+    </>
   );
 }

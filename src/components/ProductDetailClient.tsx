@@ -195,7 +195,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
               padding: "40px",
             }}
           >
-            <h2 style={{ color: "var(--accent)", marginBottom: "15px" }}>Ready to Scale Your Production?</h2>
+            <h2 style={{ color: "white", marginBottom: "15px" }}>Ready to Scale Your Production?</h2>
             <p
               style={{
                 fontSize: "1.1rem",
@@ -213,7 +213,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
               <button
                 onClick={() => openLeadPopup("quote")}
                 className="btn btn-primary"
-                style={{ background: "var(--accent)", borderColor: "var(--accent)", color: "var(--primary-dark)", cursor: "pointer", border: "none" }}
+                style={{ background: "var(--primary)", borderColor: "var(--primary)", color: "white", cursor: "pointer", border: "none" }}
               >
                 Get Immediate Pricing
               </button>
@@ -222,7 +222,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline"
-                style={{ borderColor: "white" }}
+                style={{ borderColor: "white", color: "white", background: "transparent" }}
               >
                 Chat via WhatsApp
               </a>

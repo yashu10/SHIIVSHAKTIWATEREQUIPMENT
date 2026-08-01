@@ -25,9 +25,15 @@ export const LeadPopup: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API lead ingestion
-    console.log("Lead submitted:", formData);
     setIsSubmitted(true);
+    
+    // If it was a brochure request, open the brochure immediately to prevent popup blockers
+    if (leadPopupType === "brochure") {
+      window.open(encodeURI("/assets/images/Shiv Shakti Broucher.pdf"), "_blank");
+    }
+
+    const message = `Hello, I am interested in ${leadPopupType === "quote" ? "a Quote" : "downloading the Brochure"}.\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nEmail: ${formData.email}\nRequirement: ${formData.requirement}`;
+    const whatsappUrl = `https://wa.me/919712666160?text=${encodeURIComponent(message)}`;
     
     // Reset form after a brief period and close popup
     setTimeout(() => {
@@ -35,18 +41,7 @@ export const LeadPopup: React.FC = () => {
       setFormData({ name: "", mobile: "", email: "", requirement: "" });
       closeLeadPopup();
       
-      // If it was a brochure request, download the brochure
-      if (leadPopupType === "brochure") {
-        const link = document.createElement("a");
-        link.href = "/assets/images/Shiv Shakti Broucher.pdf";
-        link.download = "Shiv Shakti Broucher.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        alert("Thank you! Your brochure download has started.");
-      } else {
-        alert("Thank you for your inquiry! Our team will contact you within 24 hours.");
-      }
+      window.open(whatsappUrl, "_blank");
     }, 1000);
   };
 

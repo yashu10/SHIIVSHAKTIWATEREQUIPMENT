@@ -1,216 +1,104 @@
-"use client";
-
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Link from "next/link";
-import { useUI } from "../context/UIContext";
 import productsData from "../data/products.json";
 import blogsData from "../data/blogs.json";
+import { HomeHeroSlider } from "../components/HomeHeroSlider";
+import { HomeVideoCarousel } from "../components/HomeVideoCarousel";
+import { HomeFaqAccordion } from "../components/HomeFaqAccordion";
 
 export default function Home() {
-  const { openLeadPopup, openVideoModal } = useUI();
-
-  // 1. Hero Slider State
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    {
-      img: "/assets/images/hero_machine_1.png",
-      title: "Precision Engineering for the Beverage Industry",
-      desc: "State-of-the-art washing, filling, and capping solutions tailored for high-volume production.",
-    },
-    {
-      img: "/assets/images/hero_machine_2.png",
-      title: "Advanced Rinsing Systems",
-      desc: "Ensuring maximum hygiene and efficiency for global standards.",
-    },
-    {
-      img: "/assets/images/hero_machine_3.png",
-      title: "High-Speed Filling Technology",
-      desc: "Robust, stainless steel construction designed for minimal downtime.",
-    },
-    {
-      img: "/assets/images/hero_machine_4.png",
-      title: "Automated Capping Units",
-      desc: "Securing your product with precision torque and reliable sealing.",
-    },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 7000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What types of filling machines do you manufacture?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We manufacture a comprehensive range of filling machines including Water Filling Machines, Juice Filling Machines, Soda Filling Machines, Beer Filling Machines, and Oil Filling Machines. All our machines are designed with food-grade stainless steel (SS304/SS316) and comply with international hygiene and safety standards.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide turnkey project solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We specialize in complete turnkey projects for packaged drinking water plants and beverage production lines. This includes everything from R.O. plant installation, blow moulding, filling & capping machines, labelling, batch coding, shrink wrapping, to final packaging — all under one roof.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Do you export machinery internationally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. We have successfully exported our machinery to over 25+ countries across Africa, the Middle East, Southeast Asia, and South America. Our machines are designed to meet international quality standards with CE marking and ISO certification.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "What certifications does your company hold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "What kind of after-sales support do you offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide 24/7 technical support, on-site installation assistance, operator training, and a comprehensive warranty on all our machines. Our dedicated service team ensures minimal downtime with prompt spare parts delivery and remote troubleshooting support.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "What is the production capacity of your machines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our filling machines are available in a wide range of capacities — from 1,000 bottles per hour (BPH) for small-scale operations to 12,000+ BPH for large-scale industrial production. We customize the capacity based on your specific requirements and budget.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "What is the typical delivery and installation timeline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard delivery timelines range from 30 to 60 days depending on machine complexity and customization requirements. Installation and commissioning typically take 5-10 days on-site, including full operator training and trial runs.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "How can I get a quotation for my project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply click the 'Request A Quote' button or call us directly at +91 9712666160. Share your production requirements, bottle sizes, and desired capacity — our engineering team will provide a detailed proposal with competitive pricing within 24 hours.",
+        },
+      },
+    ],
   };
 
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  // 2. Video Gallery Carousel Logic
-  const videoTrackRef = useRef<HTMLDivElement>(null);
-  const [videoIndex, setVideoIndex] = useState(0);
-  const videos = [
-    {
-      id: "6Pg6A-bWHjg",
-      title: "Fully Auto Water Filling Line",
-      thumb: "https://i.ytimg.com/vi/6Pg6A-bWHjg/hqdefault.jpg",
-    },
-    {
-      id: "wbqcbmG2D3g",
-      title: "PET Stretch Blow Moulding",
-      thumb: "https://i.ytimg.com/vi/wbqcbmG2D3g/hqdefault.jpg",
-    },
-    {
-      id: "FQfJBwNIgXU",
-      title: "Shrink Wrap Collation System",
-      thumb: "https://i.ytimg.com/vi/FQfJBwNIgXU/hqdefault.jpg",
-    },
-    {
-      id: "iilA4-Z5TuU",
-      title: "Oil Filling Machine (Servo System)",
-      thumb: "https://i.ytimg.com/vi/iilA4-Z5TuU/hqdefault.jpg",
-    },
-    {
-      id: "k586NB93dbg",
-      title: "Automatic Juice Filling Machine",
-      thumb: "https://i.ytimg.com/vi/k586NB93dbg/hqdefault.jpg",
-    },
-    {
-      id: "6mTa6I_Bid0",
-      title: "Soda Filling Machine",
-      thumb: "https://i.ytimg.com/vi/6mTa6I_Bid0/hqdefault.jpg",
-    },
-    {
-      id: "wLdaR-DqCRk",
-      title: "Automatic 15 Ltr. Oil Tin Filling Machine",
-      thumb: "https://i.ytimg.com/vi/wLdaR-DqCRk/hqdefault.jpg",
-    },
-    {
-      id: "EzVnuGPVFbI",
-      title: "Beer Bottle Filling & Sealing",
-      thumb: "https://i.ytimg.com/vi/EzVnuGPVFbI/hqdefault.jpg",
-    },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setVideoIndex((prev) => {
-        const visibleCards = typeof window !== "undefined" && window.innerWidth > 991 ? 3 : (window.innerWidth > 576 ? 2 : 1);
-        const maxIndex = Math.max(0, videos.length - visibleCards);
-        return prev >= maxIndex ? 0 : prev + 1;
-      });
-    }, 3500);
-    return () => clearInterval(timer);
-  }, [videos.length]);
-
-  useEffect(() => {
-    if (videoTrackRef.current) {
-      const cards = videoTrackRef.current.querySelectorAll(".video-card");
-      if (cards.length > 0) {
-        const cardWidth = (cards[0] as HTMLElement).offsetWidth;
-        const gap = 30; // matches css layout
-        const moveAmt = cardWidth + gap;
-        videoTrackRef.current.style.transform = `translateX(-${videoIndex * moveAmt}px)`;
-      }
-    }
-  }, [videoIndex]);
-
-  // 3. FAQ Accordion State
-  const [activeFaq, setActiveFaq] = useState<number | null>(null);
-  const faqs = [
-    {
-      q: "What types of filling machines do you manufacture?",
-      a: "We manufacture a comprehensive range of filling machines including Water Filling Machines, Juice Filling Machines, Soda Filling Machines, Beer Filling Machines, and Oil Filling Machines. All our machines are designed with food-grade stainless steel (SS304/SS316) and comply with international hygiene and safety standards.",
-      icon: "fa-industry",
-    },
-    {
-      q: "Do you provide turnkey project solutions?",
-      a: "Yes! We specialize in complete turnkey projects for packaged drinking water plants and beverage production lines. This includes everything from R.O. plant installation, blow moulding, filling & capping machines, labelling, batch coding, shrink wrapping, to final packaging — all under one roof.",
-      icon: "fa-gears",
-    },
-    {
-      q: "Do you export machinery internationally?",
-      a: "Absolutely. We have successfully exported our machinery to over 25+ countries across Africa, the Middle East, Southeast Asia, and South America. Our machines are designed to meet international quality standards with CE marking and ISO certification.",
-      icon: "fa-globe",
-    },
-    {
-      q: "What certifications does your company hold?",
-      a: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
-      icon: "fa-certificate",
-    },
-    {
-      q: "What kind of after-sales support do you offer?",
-      a: "We provide 24/7 technical support, on-site installation assistance, operator training, and a comprehensive warranty on all our machines. Our dedicated service team ensures minimal downtime with prompt spare parts delivery and remote troubleshooting support.",
-      icon: "fa-headset",
-    },
-    {
-      q: "What is the production capacity of your machines?",
-      a: "Our filling machines are available in a wide range of capacities — from 1,000 bottles per hour (BPH) for small-scale operations to 12,000+ BPH for large-scale industrial production. We customize the capacity based on your specific requirements and budget.",
-      icon: "fa-bolt",
-    },
-    {
-      q: "What is the typical delivery and installation timeline?",
-      a: "Standard delivery timelines range from 30 to 60 days depending on machine complexity and customization requirements. Installation and commissioning typically take 5-10 days on-site, including full operator training and trial runs.",
-      icon: "fa-truck-fast",
-    },
-    {
-      q: "How can I get a quotation for my project?",
-      a: "Simply click the 'Request A Quote' button or call us directly at +91 9712666160. Share your production requirements, bottle sizes, and desired capacity — our engineering team will provide a detailed proposal with competitive pricing within 24 hours.",
-      icon: "fa-hand-holding-dollar",
-    },
-  ];
-
-  const toggleFaq = (index: number) => {
-    setActiveFaq(activeFaq === index ? null : index);
-  };
-
-  // Get first 13 products for home page catalog preview
-  const homeProducts = productsData.slice(0, 13);
+  // Get products for home page catalog preview, excluding Semi Automatic Blow Moulding Machine
+  const homeProducts = productsData
+    .filter(p => p.title !== "Semi Automatic Blow Moulding Machine")
+    .slice(0, 12);
   // Get first 3 blogs for preview
   const homeBlogs = blogsData.slice(0, 3);
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Slider Section */}
-      <section className="hero" id="home">
-        <div className="slider-container" id="heroSlider">
-          {slides.map((slide, idx) => (
-            <div
-              key={idx}
-              className={`slide ${idx === currentSlide ? "active" : ""}`}
-              style={{ backgroundImage: `url('${slide.img}')` }}
-            >
-              <div className="slide-overlay"></div>
-              <div className="container slide-content">
-                <h1 className="fade-up">{slide.title}</h1>
-                <p className="fade-up delay-1">{slide.desc}</p>
-                <div className="slide-actions fade-up delay-2">
-                  <a href="#products" className="btn btn-primary">
-                    Explore Machinery
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="slider-controls">
-          <button className="slider-btn prev" onClick={handlePrevSlide} aria-label="Previous Slide">
-            &#10094;
-          </button>
-          <button className="slider-btn next" onClick={handleNextSlide} aria-label="Next Slide">
-            &#10095;
-          </button>
-        </div>
-      </section>
+      <HomeHeroSlider />
 
       {/* About Section */}
       <section className="about section-padding" id="about">
         <div className="container about-container">
-          <div className="about-image animate-on-scroll visible">
-            <img src="/assets/images/prod_water_filling.png" alt="Water Filling Equipment" />
+          <div className="about-image animate-on-scroll">
+            <img src="/assets/images/prod_water_filling.png" alt="Water Filling Equipment" loading="lazy" />
             <div className="floating-badge">
               <span className="year">25+</span>
               <span className="text">
@@ -220,7 +108,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="about-text animate-on-scroll visible">
+          <div className="about-text animate-on-scroll">
             <h2 className="section-title">Trusted Since 1998</h2>
             <h3 className="section-subtitle">Pioneering Industrial B2B Machinery</h3>
             <p>
@@ -248,7 +136,7 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <section className="why-us section-padding" id="why-us">
-        <div className="container animate-on-scroll visible">
+        <div className="container animate-on-scroll">
           <div className="section-header center">
             <h2 className="section-title">Why SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</h2>
             <p style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -304,7 +192,7 @@ export default function Home() {
       {/* Products Catalog Section */}
       <section className="products section-padding bg-light" id="products">
         <div className="container">
-          <div className="section-header center animate-on-scroll visible">
+          <div className="section-header center animate-on-scroll">
             <h2 className="section-title">Our Machinery Catalog</h2>
             <p>Advanced equipment designed to scale your operations.</p>
           </div>
@@ -317,14 +205,13 @@ export default function Home() {
                 ? `/assets/images/${p.image}`
                 : `/assets/images/${p.image}`;
               return (
-                <div key={idx} className="product-card animate-on-scroll visible">
+                <div key={idx} className="product-card animate-on-scroll">
                   <div className="product-image">
+                    {/* Fallback pattern not easily achievable with simple img without client code, using next/image would be better but keeping simple img as requested to avoid UI changes */}
                     <img
                       src={imgPath}
                       alt={p.title}
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
-                      }}
+                      loading="lazy"
                     />
                   </div>
                   <div className="product-info">
@@ -348,7 +235,7 @@ export default function Home() {
 
       {/* Industries We Serve Section */}
       <section className="industries section-padding" id="industries">
-        <div className="container animate-on-scroll visible">
+        <div className="container animate-on-scroll">
           <div className="section-header center">
             <h2 className="section-title">Industries We Served!</h2>
             <p style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -379,45 +266,11 @@ export default function Home() {
       </section>
 
       {/* Video Gallery Section */}
-      <section className="video-gallery section-padding bg-light" id="video">
-        <div className="container animate-on-scroll visible">
-          <div className="section-header center">
-            <h2 className="section-title">Machinery in Action</h2>
-            <p>Watch our industrial equipment run at maximum efficiency.</p>
-          </div>
-          <div className="video-carousel-container" id="videoCarousel" style={{ overflow: "hidden" }}>
-            <div
-              className="video-carousel-track"
-              id="videoTrack"
-              ref={videoTrackRef}
-              style={{ display: "flex", transition: "transform 0.5s ease" }}
-            >
-              {videos.map((vid, idx) => (
-                <div key={idx} className="video-card" style={{ flexShrink: 0 }}>
-                  <div
-                    className="video-wrapper"
-                    onClick={() => openVideoModal(`https://www.youtube.com/embed/${vid.id}`)}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img src={vid.thumb} alt={vid.title} className="video-thumb" />
-                    <div className="play-btn"></div>
-                  </div>
-                  <h3 style={{ fontSize: "1rem", lineHeight: "1.4" }}>{vid.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ textAlign: "center", marginTop: "40px" }}>
-            <Link href="/video" className="btn btn-outline" style={{ borderColor: "var(--primary)", color: "var(--primary)" }}>
-              View All Videos
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HomeVideoCarousel />
 
       {/* Blog Section */}
       <section className="blog-section section-padding bg-light" id="blog">
-        <div className="container animate-on-scroll visible">
+        <div className="container animate-on-scroll">
           <div className="section-header center">
             <h2 className="section-title">Latest News & Blogs</h2>
             <p>Stay updated with the latest trends, tips, and innovations in the bottling industry.</p>
@@ -426,7 +279,11 @@ export default function Home() {
             {homeBlogs.map((blog, idx) => (
               <div key={idx} className="blog-card">
                 <div className="blog-img-wrapper">
-                  <img src={blog.image} alt={blog.title} />
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    loading="lazy"
+                  />
                   <div className="blog-date">{blog.date}</div>
                 </div>
                 <div className="blog-content">
@@ -440,7 +297,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <div style={{ textAlign: "center", marginTop: "40px" }}>
             <Link href="/blog" className="btn btn-outline" style={{ borderColor: "var(--primary)", color: "var(--primary)" }}>
               View All Articles
             </Link>
@@ -450,7 +307,7 @@ export default function Home() {
 
       {/* Clients Logo Section */}
       <section className="clients section-padding" id="clients" style={{ backgroundColor: "var(--bg-light)" }}>
-        <div className="container animate-on-scroll visible">
+        <div className="container animate-on-scroll">
           <div className="section-header center" style={{ marginBottom: "50px" }}>
             <h2 className="section-title">Our Esteemed Clients</h2>
             <p className="section-subtitle">We are trusted by industry leaders across the globe.</p>
@@ -485,7 +342,7 @@ export default function Home() {
         <div className="glass-overlay new-glass-overlay"></div>
         <div className="container relative z-index-1">
           <div className="global-reach-wrapper">
-            <div className="reach-text-content animate-on-scroll visible">
+            <div className="reach-text-content animate-on-scroll">
               <span className="text-accent">Worldwide Presence</span>
               <h2 className="section-title text-white" style={{ textAlign: "left", marginBottom: "20px" }}>
                 Exporting Excellence Globally
@@ -536,9 +393,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="reach-map-content animate-on-scroll delay-1 visible">
+            <div className="reach-map-content animate-on-scroll delay-1">
               <div className="map-floating-wrapper">
-                <img src="/assets/images/bg_world_map.png" alt="Global Network Map" className="world-map-animated" />
+                <img src="/assets/images/bg_world_map.png" alt="Global Network Map" className="world-map-animated" loading="lazy" />
                 <div className="pulse-dot" style={{ top: "35%", left: "22%" }}></div>
                 <div className="pulse-dot" style={{ top: "45%", left: "48%" }}></div>
                 <div className="pulse-dot" style={{ top: "55%", left: "75%" }}></div>
@@ -553,84 +410,15 @@ export default function Home() {
       {/* FAQ Section */}
       <section className="faq-section section-padding" id="faq">
         <div className="container">
-          <div className="section-header center animate-on-scroll visible">
+          <div className="section-header center animate-on-scroll">
             <span className="faq-badge">Got Questions?</span>
             <h2 className="section-title">Frequently Asked Questions</h2>
             <p className="faq-subtitle">Everything you need to know about our machinery, processes, and services.</p>
           </div>
 
-          <div className="faq-wrapper animate-on-scroll visible">
-            {/* Left Column */}
-            <div className="faq-col">
-              {faqs.slice(0, 4).map((faq, idx) => (
-                <div key={idx} className={`faq-item ${activeFaq === idx ? "active" : ""}`} id={`faq-${idx + 1}`}>
-                  <button
-                    className="faq-question"
-                    aria-expanded={activeFaq === idx}
-                    onClick={() => toggleFaq(idx)}
-                  >
-                    <span className="faq-icon">
-                      <i className={`fa-solid ${faq.icon}`}></i>
-                    </span>
-                    <span>{faq.q}</span>
-                    <span className="faq-toggle">
-                      <span className="faq-plus"></span>
-                    </span>
-                  </button>
-                  <div
-                    className="faq-answer"
-                    id={`faq-answer-${idx + 1}`}
-                    style={{
-                      maxHeight: activeFaq === idx ? "200px" : "0px",
-                      opacity: activeFaq === idx ? 1 : 0,
-                      overflow: "hidden",
-                      transition: "all 0.3s ease",
-                    }}
-                  >
-                    <p>{faq.a}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <HomeFaqAccordion />
 
-            {/* Right Column */}
-            <div className="faq-col">
-              {faqs.slice(4, 8).map((faq, idx) => {
-                const actualIdx = idx + 4;
-                return (
-                  <div key={actualIdx} className={`faq-item ${activeFaq === actualIdx ? "active" : ""}`} id={`faq-${actualIdx + 1}`}>
-                    <button
-                      className="faq-question"
-                      aria-expanded={activeFaq === actualIdx}
-                      onClick={() => toggleFaq(actualIdx)}
-                    >
-                      <span className="faq-icon">
-                        <i className={`fa-solid ${faq.icon}`}></i>
-                      </span>
-                      <span>{faq.q}</span>
-                      <span className="faq-toggle">
-                        <span className="faq-plus"></span>
-                      </span>
-                    </button>
-                    <div
-                      className="faq-answer"
-                      id={`faq-answer-${actualIdx + 1}`}
-                      style={{
-                        maxHeight: activeFaq === actualIdx ? "200px" : "0px",
-                        opacity: activeFaq === actualIdx ? 1 : 0,
-                        overflow: "hidden",
-                        transition: "all 0.3s ease",
-                      }}
-                    >
-                      <p>{faq.a}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="faq-cta animate-on-scroll visible">
+          <div className="faq-cta animate-on-scroll">
             <p>Still have questions? We're here to help!</p>
             <Link href="/contact" className="btn btn-primary">
               Contact Our Experts
@@ -641,3 +429,4 @@ export default function Home() {
     </main>
   );
 }
+

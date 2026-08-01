@@ -1081,7 +1081,7 @@ ul {
 /* ================== Inner Pages (Products) ================== */
 .page-header {
     background: var(--primary-light);
-    padding: 150px 0 60px;
+    padding: 100px 0 100px;
     text-align: center;
     color: var(--white);
     position: relative;

@@ -10,9 +10,8 @@ export const VideoModal: React.FC = () => {
 
   return (
     <div
-      className="video-modal"
+      className="video-modal active"
       id="videoModal"
-      style={{ display: "flex", opacity: 1, pointerEvents: "all" }}
       onClick={(e) => {
         if (e.target === e.currentTarget) closeVideoModal();
       }}

@@ -23,26 +23,25 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Contact form submitted:", formData);
     setIsSubmitted(true);
+    
+    const message = `Hello, I have an inquiry.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/919712666160?text=${encodeURIComponent(message)}`;
+
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
-      alert("Thank you! Your message has been submitted. Our team will get back to you shortly.");
+      window.open(whatsappUrl, "_blank");
     }, 1200);
   };
 
   return (
     <main>
       {/* Page Header */}
-      <section className="page-header">
+      <section className="page-header pattern-bg active">
         <div className="container">
-          <ul className="breadcrumb">
-            <li><Link href="/">Home</Link></li>
-            <li>Contact Us</li>
-          </ul>
-          <h1>Contact Us</h1>
-          <p>We are here to assist with your industrial machinery needs.</p>
+          <h1 className="page-title fade-up">CONTACT <span className="text-gradient">US</span></h1>
+          <p className="page-subtitle fade-up delay-1">We are here to assist with your industrial machinery needs.</p>
         </div>
       </section>
 
@@ -51,7 +50,7 @@ export default function Contact() {
         <div className="container" style={{ maxWidth: "1000px" }}>
           
           {/* Contact Info Grid */}
-          <div className="contact-info-grid animate-on-scroll visible">
+          <div className="contact-info-grid animate-on-scroll">
             <div className="contact-info-card">
               <i className="fa-solid fa-building"></i>
               <h3>Office Address</h3>
@@ -90,7 +89,7 @@ export default function Contact() {
           </div>
 
           {/* Custom Form Section */}
-          <div className="contact-form-section animate-on-scroll visible" style={{ position: "relative" }}>
+          <div className="contact-form-section animate-on-scroll" style={{ position: "relative" }}>
             <p className="contact-subtitle">SEND US A MESSAGE</p>
             <h2 className="contact-title">Get in touch with us</h2>
             <p className="contact-desc">
@@ -176,7 +175,7 @@ export default function Contact() {
           </div>
 
           {/* Google Map */}
-          <div className="map-container-iframe animate-on-scroll visible" style={{ position: "relative", marginTop: "40px" }}>
+          <div className="map-container-iframe animate-on-scroll" style={{ position: "relative", marginTop: "40px" }}>
             {/* Overlay directions shortcut link */}
             <a
               href="https://www.google.com/maps/dir/?api=1&destination=B-5,+Revabhai+Industrial+Estate,+Opp.+Ishwar+Krupa+Weight+Bridge,+CTM,+Ahmedabad+-+380026"

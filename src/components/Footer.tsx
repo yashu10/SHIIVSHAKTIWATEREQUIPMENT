@@ -45,11 +45,11 @@ export const Footer: React.FC = () => {
               <i className="fa-solid fa-arrow-right" style={{ marginRight: "5px" }}></i> Know More
             </Link>
             <div className="social-links">
-              <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/share/1ayi4yDzHA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
               <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
-              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+              <a href="https://www.instagram.com/shivshaktiwatersolution?igsh=ZGlvanBjcGtuOXR2" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
               <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
-              <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+              <a href="https://youtube.com/@0508pradip?si=oyYaSQHBArGgwJog" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
             </div>
           </div>
 
@@ -85,7 +85,6 @@ export const Footer: React.FC = () => {
               <li><Link href="/products/sticker-labelling-machine">Automatic Sticker Labeling Machine</Link></li>
               <li><Link href="/products/inkjet-batch-coding">Inkjet Batch Coding</Link></li>
               <li><Link href="/products/chemical-lab">Chemical Lab</Link></li>
-              <li><Link href="/products/micro-biology-lab">Micro-Biology Lab</Link></li>
               <li><Link href="/products/r-o-plant">R. O. Plant</Link></li>
             </ul>
           </div>

@@ -19,14 +19,10 @@ export default function About() {
   return (
     <main>
       {/* Page Header */}
-      <section className="page-header">
+      <section className="page-header pattern-bg active">
         <div className="container">
-          <ul className="breadcrumb">
-            <li><Link href="/">Home</Link></li>
-            <li>About Us</li>
-          </ul>
-          <h1>About SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</h1>
-          <p>Pioneering mineral water bottling and treatment solutions globally.</p>
+          <h1 className="page-title fade-up">ABOUT <span className="text-gradient">SHIV SHAKTI</span></h1>
+          <p className="page-subtitle fade-up delay-1">Pioneering mineral water bottling and treatment solutions globally.</p>
         </div>
       </section>
 
@@ -35,29 +31,20 @@ export default function About() {
         <div className="container" style={{ maxWidth: "1000px" }}>
           
           {/* Shiv Shakti Group Of Company Structure */}
-          <div className="group-section-wrapper animate-on-scroll visible">
+          <div className="group-section-wrapper animate-on-scroll">
             <div className="group-chart-box">
               <h2 className="group-chart-title">
                 SHIV SHAKTI <span>GROUP OF COMPANY</span>
               </h2>
               <div className="org-tree">
-                <div className="org-row-1">
-                  <div className="org-box-wrap">
-                    <div className="org-box root-box">
-                      <i className="fa-solid fa-building-user"></i>
-                      <span>SHIV SHAKTI GROUP</span>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="org-connector-main"></div>
 
                 <div className="org-row-2">
                   <div className="org-box-wrap left-wrap">
                     <div className="org-connector-drop"></div>
                     <div className="org-box">
-                      <i className="fa-solid fa-cogs"></i>
-                      <span>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</span>
+                      <i className="fa-solid fa-screwdriver-wrench"></i>
+                      <span>SHIV SHAKTI ENGG. WORKS</span>
                     </div>
                   </div>
                   <div className="org-box-wrap right-wrap">
@@ -66,6 +53,14 @@ export default function About() {
                       <i className="fa-solid fa-industry"></i>
                       <span>SHIV SHAKTI ENTERPRISE</span>
                     </div>
+                  </div>
+                </div>
+
+                <div className="org-row-3">
+                  <div className="org-connector-drop-long"></div>
+                  <div className="org-box highlight-box">
+                    <i className="fa-solid fa-droplet"></i>
+                    <span>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</span>
                   </div>
                 </div>
               </div>
@@ -102,7 +97,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content-section animate-on-scroll visible">
+          <div className="about-content-section animate-on-scroll">
             <h2>
               <i className="fa-solid fa-clock-rotate-left"></i> Company History
             </h2>
@@ -114,7 +109,7 @@ export default function About() {
           </div>
 
           <div className="mission-vision-wrapper">
-            <div className="mv-card animate-on-scroll visible">
+            <div className="mv-card animate-on-scroll">
               <h2>
                 <i className="fa-solid fa-bullseye"></i> Our Mission
               </h2>
@@ -123,7 +118,7 @@ export default function About() {
                 expectations while maintaining the highest standards of quality and environmental responsibility.
               </p>
             </div>
-            <div className="mv-card animate-on-scroll delay-1 visible">
+            <div className="mv-card animate-on-scroll delay-1">
               <h2>
                 <i className="fa-solid fa-eye"></i> Our Vision
               </h2>
@@ -134,7 +129,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content-section animate-on-scroll visible">
+          <div className="about-content-section animate-on-scroll">
             <h2>
               <i className="fa-solid fa-star"></i> Our Core Values
             </h2>
@@ -148,7 +143,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content-section animate-on-scroll visible">
+          <div className="about-content-section animate-on-scroll">
             <h2>
               <i className="fa-solid fa-industry"></i> Infrastructure
             </h2>
@@ -159,7 +154,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="about-content-section animate-on-scroll visible">
+          <div className="about-content-section animate-on-scroll">
             <h2>
               <i className="fa-solid fa-users-gear"></i> Our Team
             </h2>
@@ -169,7 +164,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="about-content-section animate-on-scroll visible">
+          <div className="about-content-section animate-on-scroll">
             <h2>
               <i className="fa-solid fa-certificate"></i> Our Certifications
             </h2>
@@ -191,10 +186,10 @@ export default function About() {
                   <img
                     src="/assets/images/certificates/cor.jpg"
                     alt="Certificate of Registration - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>
-                <div className="cert-info">
+                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
                   <h4>Certificate of Registration</h4>
                 </div>
               </div>
@@ -203,11 +198,35 @@ export default function About() {
                   <img
                     src="/assets/images/certificates/coc.jpg"
                     alt="Certificate of Compliance - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>
-                <div className="cert-info">
+                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
                   <h4>Certificate of Compliance</h4>
+                </div>
+              </div>
+              <div className="cert-card">
+                <div className="img-wrapper">
+                  <img
+                    src="/assets/images/certificates/CE-DRAFT.jpg"
+                    alt="CE Certificate - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+                  />
+                </div>
+                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
+                  <h4>CE Certificate</h4>
+                </div>
+              </div>
+              <div className="cert-card">
+                <div className="img-wrapper">
+                  <img
+                    src="/assets/images/certificates/QMS 9001-DRAFT.jpg"
+                    alt="ISO 9001 QMS Certificate - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
+                  />
+                </div>
+                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
+                  <h4>ISO 9001 QMS Certificate</h4>
                 </div>
               </div>
             </div>

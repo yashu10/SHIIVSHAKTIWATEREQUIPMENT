@@ -49,10 +49,16 @@ export default function About() {
                   </div>
                   <div className="org-box-wrap right-wrap">
                     <div className="org-connector-drop"></div>
-                    <div className="org-box">
+                    <a 
+                      href="https://www.mineralwaterfillingmachineinindia.com/index.php" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="org-box"
+                      style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}
+                    >
                       <i className="fa-solid fa-industry"></i>
                       <span>SHIV SHAKTI ENTERPRISE</span>
-                    </div>
+                    </a>
                   </div>
                 </div>
 

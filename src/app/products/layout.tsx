@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     canonical: "https://www.shivshaktiengineering.com/products",
   },
   openGraph: {
-    title: "Our Machinery Catalog | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    title: "Our Machinery Catalog | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     description: "Browse industrial packaging and bottling equipment built for maximum throughput.",
     url: "https://www.shivshaktiengineering.com/products",
   },

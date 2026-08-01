@@ -27,8 +27,8 @@ const baseUrl = "https://www.shivshaktiengineering.com";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. | Water Filling & Packaging Machinery",
-    template: "%s | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    default: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Water Filling & Packaging Machinery",
+    template: "%s | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
   },
   description: "Leading manufacturer & exporter of mineral water filling machinery, RO plants, PET blow moulding, and packaging equipment since 1998. ISO 9001:2015 certified.",
   keywords: [
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     "packaging machinery manufacturer India",
     "Shiv Shakti Water Equipment"
   ],
-  authors: [{ name: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD." }],
-  creator: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-  publisher: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  authors: [{ name: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD." }],
+  creator: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  publisher: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
   robots: {
     index: true,
     follow: true,
@@ -71,21 +71,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    siteName: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-    title: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. | Industrial Bottling Machinery",
+    siteName: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Industrial Bottling Machinery",
     description: "Trusted B2B manufacturer of water filling machines, RO plants, PET blow moulding, and packaging equipment.",
     images: [
       {
         url: `${baseUrl}/assets/images/shiv_shakti_logo.png`,
         width: 800,
         height: 600,
-        alt: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. Logo",
+        alt: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     description: "Leading manufacturer of mineral water bottling and liquid filling machinery in India.",
     images: [`${baseUrl}/assets/images/shiv_shakti_logo.png`],
   },
@@ -97,7 +97,7 @@ const jsonLdOrganization = {
     {
       "@type": ["Organization", "LocalBusiness"],
       "@id": `${baseUrl}/#organization`,
-      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
       "alternateName": "Shiv Shakti Water Equipment",
       "url": baseUrl,
       "logo": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
@@ -134,7 +134,7 @@ const jsonLdOrganization = {
       "@type": "WebSite",
       "@id": `${baseUrl}/#website`,
       "url": baseUrl,
-      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
       "description": "Industrial Bottling and Packaging Machinery Manufacturer",
       "publisher": {
         "@id": `${baseUrl}/#organization`

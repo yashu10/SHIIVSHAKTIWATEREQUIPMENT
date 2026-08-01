@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-  description: "Established in 1998, SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is one of Gujarat's leading manufacturers of mineral water bottling equipment with 25+ years combined experience.",
+  title: "About Us | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  description: "Established in 1998, SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is one of Gujarat's leading manufacturers of mineral water bottling equipment with 25+ years combined experience.",
 };
 
 export default function About() {
@@ -60,7 +60,7 @@ export default function About() {
                   <div className="org-connector-drop-long"></div>
                   <div className="org-box highlight-box">
                     <i className="fa-solid fa-droplet"></i>
-                    <span>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</span>
+                    <span>SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.</span>
                   </div>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function About() {
               <i className="fa-solid fa-clock-rotate-left"></i> Company History
             </h2>
             <p>
-              Established in 1998, SHIV SHAKTI WATER EQUIPMENT PVT. LTD. has grown to become one of Gujarat&apos;s
+              Established in 1998, SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. has grown to become one of Gujarat&apos;s
               leading manufacturers of mineral water bottling equipment. With over 25+ years of combined industry
               experience, our team has successfully delivered 1000+ projects across 15+ countries.
             </p>
@@ -185,7 +185,7 @@ export default function About() {
                 <div className="img-wrapper">
                   <img
                     src="/assets/images/certificates/cor.jpg"
-                    alt="Certificate of Registration - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    alt="Certificate of Registration - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function About() {
                 <div className="img-wrapper">
                   <img
                     src="/assets/images/certificates/coc.jpg"
-                    alt="Certificate of Compliance - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    alt="Certificate of Compliance - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function About() {
                 <div className="img-wrapper">
                   <img
                     src="/assets/images/certificates/CE-DRAFT.jpg"
-                    alt="CE Certificate - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    alt="CE Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>
@@ -221,7 +221,7 @@ export default function About() {
                 <div className="img-wrapper">
                   <img
                     src="/assets/images/certificates/QMS 9001-DRAFT.jpg"
-                    alt="ISO 9001 QMS Certificate - SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                    alt="ISO 9001 QMS Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
                 </div>

@@ -31,7 +31,7 @@ export async function generateMetadata(props: {
   const imageUrl = `https://www.shivshaktiengineering.com/assets/images/${product.image}`;
 
   return {
-    title: `${product.seoTitle} | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
+    title: `${product.seoTitle} | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
     description: product.seoDesc,
     alternates: {
       canonical: `https://www.shivshaktiengineering.com/products/${resolvedParams.slug}`,
@@ -90,7 +90,7 @@ export default async function ProductPage(props: {
     "category": product.category,
     "brand": {
       "@type": "Brand",
-      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
     },
     "offers": {
       "@type": "AggregateOffer",

@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
           <Link href="/" className="logo" onClick={closeMobileMenu}>
             <img
               src="/assets/images/shiv_shakti_logo.png"
-              alt="SHIV SHAKTI WATER EQUIPMENT PVT. LTD. Logo"
+              alt="SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. Logo"
               className="header-logo"
             />
           </Link>

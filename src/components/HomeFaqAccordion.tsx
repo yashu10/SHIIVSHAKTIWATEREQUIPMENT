@@ -24,7 +24,7 @@ export function HomeFaqAccordion() {
     },
     {
       q: "What certifications does your company hold?",
-      a: "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
+      a: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
       icon: "fa-certificate",
     },
     {

@@ -96,7 +96,7 @@ export const Footer: React.FC = () => {
               If you have any questions or need help, feel free to contact with our team.
             </p>
             <div className="contact-address-block">
-              <strong>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</strong>
+              <strong>SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.</strong>
               <br />
               Plot No. B/5, Revabhai Industrial Estate,
               <br />
@@ -154,7 +154,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} SHIV SHAKTI WATER EQUIPMENT PVT. LTD.. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.. All rights reserved.</p>
         </div>
       </div>
 

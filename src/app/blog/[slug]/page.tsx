@@ -29,7 +29,7 @@ export async function generateMetadata(props: {
   const imageUrl = `https://www.shivshaktiengineering.com${blog.image}`;
 
   return {
-    title: `${blog.title} | Blog | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
+    title: `${blog.title} | Blog | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
     description: blog.summary,
     alternates: {
       canonical: `https://www.shivshaktiengineering.com/blog/${resolvedParams.slug}`,
@@ -82,11 +82,11 @@ export default async function BlogPage(props: {
     "dateModified": blog.date || "2024-01-01",
     "author": {
       "@type": "Organization",
-      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD."
+      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
     },
     "publisher": {
       "@type": "Organization",
-      "name": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.shivshaktiengineering.com/assets/images/shiv_shakti_logo.png"

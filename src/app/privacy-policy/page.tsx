@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | SHIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-  description: "Privacy Policy for SHIV SHAKTI WATER EQUIPMENT PVT. LTD. regarding B2B lead generation and customer data handling.",
+  title: "Privacy Policy | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  description: "Privacy Policy for SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. regarding B2B lead generation and customer data handling.",
 };
 
 export default function PrivacyPolicy() {
@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
             <li>Privacy Policy</li>
           </ul>
           <h1>Privacy Policy</h1>
-          <p>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</p>
+          <p>SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.</p>
         </div>
       </section>
       <section className="section-padding bg-light">

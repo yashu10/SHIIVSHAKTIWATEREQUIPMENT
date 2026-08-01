@@ -40,7 +40,7 @@ export default function Home() {
         "name": "What certifications does your company hold?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
+          "text": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories.",
         },
       },
       {
@@ -112,7 +112,7 @@ export default function Home() {
             <h2 className="section-title">Trusted Since 1998</h2>
             <h3 className="section-subtitle">Pioneering Industrial B2B Machinery</h3>
             <p>
-              SHIV SHAKTI WATER EQUIPMENT PVT. LTD. is a premier manufacturer and exporter based in Ahmedabad, specializing
+              SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is a premier manufacturer and exporter based in Ahmedabad, specializing
               in comprehensive turnkey projects for the packaged drinking water and beverage industries.
             </p>
             <p>
@@ -138,7 +138,7 @@ export default function Home() {
       <section className="why-us section-padding" id="why-us">
         <div className="container animate-on-scroll">
           <div className="section-header center">
-            <h2 className="section-title">Why SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</h2>
+            <h2 className="section-title">Why SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.</h2>
             <p style={{ maxWidth: "800px", margin: "0 auto" }}>
               Trusted manufacturers in Gujarat, India, providing high-quality solutions for all your water treatment needs.
             </p>

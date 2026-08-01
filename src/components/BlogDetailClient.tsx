@@ -232,7 +232,7 @@ export const BlogDetailClient: React.FC<BlogDetailClientProps> = ({
                 onError={handleImageError}
               />
               <div className="blog-author-info">
-                <h4>SHIV SHAKTI WATER EQUIPMENT PVT. LTD.</h4>
+                <h4>SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.</h4>
                 <p>
                   Premier ISO 9001:2015 & CE Certified Manufacturer of Automatic Mineral Water Bottling Lines, PET Blow Moulding Machines, CSD Soda Fillers & Packaging Systems based in Ahmedabad, India.
                 </p>

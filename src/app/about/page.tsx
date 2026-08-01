@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import CertificatesGallery from "../../components/CertificatesGallery";
 
 export const metadata = {
   title: "About Us | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
@@ -179,56 +180,7 @@ export default function About() {
               Certified manufacturer, our corporate mandate focuses on delivering excellence, ensuring consistent
               growth, and maintaining strong core values across all operations.
             </p>
-            <div className="cert-grid">
-              <div className="cert-card">
-                <div className="img-wrapper">
-                  <img
-                    src="/assets/images/certificates/cor.jpg"
-                    alt="Certificate of Registration - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-                  />
-                </div>
-                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
-                  <h4>Certificate of Registration</h4>
-                </div>
-              </div>
-              <div className="cert-card">
-                <div className="img-wrapper">
-                  <img
-                    src="/assets/images/certificates/coc.jpg"
-                    alt="Certificate of Compliance - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-                  />
-                </div>
-                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
-                  <h4>Certificate of Compliance</h4>
-                </div>
-              </div>
-              <div className="cert-card">
-                <div className="img-wrapper">
-                  <img
-                    src="/assets/images/certificates/cedraft.jpg"
-                    alt="CE Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-                  />
-                </div>
-                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
-                  <h4>CE Certificate</h4>
-                </div>
-              </div>
-              <div className="cert-card">
-                <div className="img-wrapper">
-                  <img
-                    src="/assets/images/certificates/qmsdraft.jpg"
-                    alt="ISO 9001 QMS Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-                    style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-                  />
-                </div>
-                <div className="cert-info" style={{ marginTop: "15px", textAlign: "center" }}>
-                  <h4>ISO 9001 QMS Certificate</h4>
-                </div>
-              </div>
-            </div>
+            <CertificatesGallery />
           </div>
 
         </div>

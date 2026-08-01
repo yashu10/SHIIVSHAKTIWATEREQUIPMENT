@@ -1638,6 +1638,7 @@ ul {
         font-size: 1.1rem;
         display: block;
         width: 100%;
+        background: transparent !important;
     }
 
     .dropdown,
@@ -1650,6 +1651,7 @@ ul {
         display: none;
         padding: 5px 0 5px 15px;
         min-width: 100%;
+        background: transparent !important;
     }
 
     .has-dropdown.open>.dropdown,
@@ -3902,5 +3904,10 @@ ul {
     display: flex !important;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 991px) {
+  .nav-links li, .nav-links .dropdown li, .nav-links .subdropdown li {
+    background: transparent !important;
   }
 }

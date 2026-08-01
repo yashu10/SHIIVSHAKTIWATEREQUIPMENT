@@ -7,42 +7,30 @@ on:
 
 jobs:
   deploy:
+    name: Deploy Application
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.2
         with:
-          node-version: 24
-          cache: npm
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ${{ secrets.APP_PATH }}
 
-      - name: Install Dependencies
-        run: npm ci
+            echo "Pulling latest code..."
+            git fetch origin
+            git reset --hard origin/main
 
-      - name: Build Next.js
-        run: npm run build
+            echo "Installing dependencies..."
+            npm install
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
+            echo "Building application..."
+            npm run build
 
-          local-dir: ./
+            echo "Restarting application..."
+            pm2 restart shivshakti || pm2 start npm --name shivshakti -- start
 
-          server-dir: /public_html/
-
-          dangerous-clean-slate: false
-
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/.next/cache/**
-            **/node_modules/**
-            **/.env*
-            README.md
+            pm2 save

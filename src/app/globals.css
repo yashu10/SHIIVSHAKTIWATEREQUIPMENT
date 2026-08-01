@@ -1608,7 +1608,7 @@ ul {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background: var(--white);
+        background: var(--primary-dark);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -1634,7 +1634,7 @@ ul {
     .nav-links>li>a,
     .nav-links .dropdown a,
     .nav-links .subdropdown a {
-        color: var(--text-main) !important;
+        color: var(--white) !important;
         font-size: 1.1rem;
         display: block;
         width: 100%;

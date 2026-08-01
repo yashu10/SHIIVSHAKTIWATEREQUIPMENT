@@ -201,7 +201,7 @@ export default function About() {
               <div className="cert-card">
                 <div className="img-wrapper">
                   <img
-                    src="/assets/images/certificates/CE-DRAFT.jpg"
+                    src="/assets/images/certificates/cedraft.jpg"
                     alt="CE Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />
@@ -213,7 +213,7 @@ export default function About() {
               <div className="cert-card">
                 <div className="img-wrapper">
                   <img
-                    src="/assets/images/certificates/qms-draft.jpg"
+                    src="/assets/images/certificates/qmsdraft.jpg"
                     alt="ISO 9001 QMS Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />

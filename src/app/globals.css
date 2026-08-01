@@ -3878,4 +3878,19 @@ ul {
 
 .page-transition {
     animation: pageFadeIn 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}.cert-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 600px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .cert-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

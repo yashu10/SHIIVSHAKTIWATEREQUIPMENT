@@ -173,14 +173,7 @@ export default function About() {
               Certified manufacturer, our corporate mandate focuses on delivering excellence, ensuring consistent
               growth, and maintaining strong core values across all operations.
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                gap: "30px",
-                marginTop: "30px",
-              }}
-            >
+            <div className="cert-grid">
               <div className="cert-card">
                 <div className="img-wrapper">
                   <img

@@ -54,7 +54,7 @@ export default function About() {
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="org-box"
-                      style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}
+                      style={{ textDecoration: "none", color: "#fff", cursor: "pointer" }}
                     >
                       <i className="fa-solid fa-industry"></i>
                       <span>SHIV SHAKTI ENTERPRISE</span>

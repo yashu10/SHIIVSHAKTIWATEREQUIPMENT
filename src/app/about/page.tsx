@@ -208,7 +208,7 @@ export default function About() {
               <div className="cert-card">
                 <div className="img-wrapper">
                   <img
-                    src="/assets/images/certificates/ce-draft.jpg"
+                    src="/assets/images/certificates/CE-DRAFT.jpg"
                     alt="CE Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
                     style={{ width: "100%", height: "auto", borderRadius: "8px" }}
                   />

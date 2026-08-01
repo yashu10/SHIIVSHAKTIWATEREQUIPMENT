@@ -67,6 +67,25 @@ export const Header: React.FC = () => {
         <div className="container nav-container">
 
           <div className={`nav-wrapper ${isMobileMenuOpen ? "active" : ""}`}>
+            <button 
+              className="mobile-close-btn" 
+              onClick={closeMobileMenu}
+              style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                background: 'none',
+                border: 'none',
+                color: '#fff',
+                fontSize: '40px',
+                lineHeight: '1',
+                cursor: 'pointer',
+                zIndex: 1000
+              }}
+              aria-label="Close Menu"
+            >
+              &times;
+            </button>
             <ul className="nav-links">
               <li>
                 <Link href="/" onClick={closeMobileMenu}>Home</Link>

@@ -3894,3 +3894,13 @@ ul {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.mobile-close-btn {
+  display: none !important;
+}
+@media (max-width: 991px) {
+  .mobile-close-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}

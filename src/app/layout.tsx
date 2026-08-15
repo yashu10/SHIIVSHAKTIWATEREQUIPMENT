@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     "batch coding machine",
     "sticker labelling machine",
     "packaging machinery manufacturer India",
-    "Shiv Shakti Water Equipment"
+    "SHIIV SHAKTI Water Equipment"
   ],
   authors: [{ name: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD." }],
   creator: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {},
+  alternates: { canonical: "/" },
   icons: {
     icon: "/assets/images/fav_icon.png",
     shortcut: "/assets/images/fav_icon.png",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Industrial Bottling Machinery",
+    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Water Filling & Packaging Machinery",
     description: "Trusted B2B manufacturer of water filling machines, RO plants, PET blow moulding, and packaging equipment.",
     images: [
       {
@@ -96,7 +96,7 @@ const jsonLdOrganization = {
       "@type": ["Organization", "LocalBusiness"],
       "@id": `${baseUrl}/#organization`,
       "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-      "alternateName": "Shiv Shakti Water Equipment",
+      "alternateName": "SHIIV SHAKTI Water Equipment",
       "url": baseUrl,
       "logo": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "image": `${baseUrl}/assets/images/shiv_shakti_logo.png`,

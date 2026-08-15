@@ -148,7 +148,7 @@ export const BlogDetailClient: React.FC<BlogDetailClientProps> = ({
               <div className="blog-meta-left">
                 <div className="blog-meta-item">
                   <i className="fa-solid fa-user-gear"></i>
-                  <span>Shiv Shakti Engineering Team</span>
+                  <span>SHIIV SHAKTI Engineering Team</span>
                 </div>
                 <div className="blog-meta-item">
                   <i className="fa-solid fa-check-double"></i>
@@ -227,7 +227,7 @@ export const BlogDetailClient: React.FC<BlogDetailClientProps> = ({
             <div className="blog-author-box">
               <img
                 src="/assets/images/shiv_shakti_logo.png"
-                alt="Shiv Shakti Water Equipment Logo"
+                alt="SHIIV SHAKTI Water Equipment Logo"
                 className="blog-author-avatar"
                 onError={handleImageError}
               />

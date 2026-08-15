@@ -381,7 +381,7 @@ export default function Home() {
                     <div className="client-logo-inner">
                       <img
                         src={`/assets/images/clients/${logoNumber}.jpg`}
-                        alt={`Shiv Shakti Client Logo ${logoNumber}`}
+                        alt={`SHIIV SHAKTI Client Logo ${logoNumber}`}
                         loading="lazy"
                       />
                     </div>

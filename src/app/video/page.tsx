@@ -2,6 +2,11 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Machinery Videos | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  alternates: { canonical: "/video" },
+};
 import { useUI } from "../../context/UIContext";
 
 interface Video {

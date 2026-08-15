@@ -4,7 +4,7 @@ import { BlogListClient } from "../../components/BlogListClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Latest Insights & News | Shiv Shakti Water Equipment",
+  title: "Latest Insights & News | SHIIV SHAKTI Water Equipment",
   description: "Read our latest articles on industry trends, maintenance tips, sustainability, and quality control in the bottling and packaging industry.",
 };
 

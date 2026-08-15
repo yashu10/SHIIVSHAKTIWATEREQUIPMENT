@@ -50,7 +50,7 @@ export default function About() {
       {/* Page Header */}
       <section className="page-header pattern-bg active">
         <div className="container">
-          <h1 className="page-title fade-up">ABOUT <span className="text-gradient">SHIV SHAKTI</span></h1>
+          <h1 className="page-title fade-up">ABOUT <span className="text-gradient">SHIIV SHAKTI</span></h1>
           <p className="page-subtitle fade-up delay-1">Pioneering mineral water bottling and treatment solutions globally.</p>
         </div>
       </section>
@@ -59,11 +59,11 @@ export default function About() {
       <section className="section-padding bg-light">
         <div className="container" style={{ maxWidth: "1000px" }}>
           
-          {/* Shiv Shakti Group Of Company Structure */}
+          {/* SHIIV SHAKTI Group Of Company Structure */}
           <div className="group-section-wrapper animate-on-scroll">
             <div className="group-chart-box">
               <h2 className="group-chart-title">
-                SHIV SHAKTI <span>GROUP OF COMPANY</span>
+                SHIIV SHAKTI <span>GROUP OF COMPANY</span>
               </h2>
               <div className="org-tree">
                 <div className="org-connector-main"></div>

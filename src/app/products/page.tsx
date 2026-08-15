@@ -4,7 +4,7 @@ import { ProductsListClient } from "../../components/ProductsListClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Machinery Catalog | Shiv Shakti Water Equipment",
+  title: "Machinery Catalog | SHIIV SHAKTI Water Equipment",
   description: "Explore our comprehensive catalog of heavy-duty, automatic packaging and water treatment equipment including RO plants, filling machines, and blow moulding.",
 };
 

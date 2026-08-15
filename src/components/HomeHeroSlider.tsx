@@ -54,7 +54,11 @@ export function HomeHeroSlider() {
           >
             <div className="slide-overlay"></div>
             <div className="container slide-content">
-              <h1 className="fade-up">{slide.title}</h1>
+              {idx === 0 ? (
+                <h1 className="fade-up">{slide.title}</h1>
+              ) : (
+                <h2 className="fade-up">{slide.title}</h2>
+              )}
               <p className="fade-up delay-1">{slide.desc}</p>
               <div className="slide-actions fade-up delay-2">
                 <a href="#products" className="btn btn-primary">

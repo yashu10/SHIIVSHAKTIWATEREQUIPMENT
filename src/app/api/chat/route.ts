@@ -13,8 +13,8 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.ANTHROPIC_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json({ error: 'Anthropic API key is not configured' }, { status: 500 });
+    if (!apiKey || apiKey === 'your_anthropic_api_key_here' || apiKey === 'your_anthropic_api_key') {
+      return NextResponse.json({ reply: 'SYSTEM ERROR: ANTHROPIC_API_KEY is not configured or is still the default placeholder. Please add your real key to .env.local and restart the server.' });
     }
 
     const systemPrompt = `You are a helpful customer support assistant for SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.
@@ -101,7 +101,7 @@ ${JSON.stringify(companyKnowledge, null, 2)}`;
     if (!response.ok) {
       const errorData = await response.text();
       console.error('Anthropic API Error:', errorData);
-      return NextResponse.json({ error: 'Failed to communicate with AI provider' }, { status: 502 });
+      return NextResponse.json({ reply: `SYSTEM ERROR (Anthropic API): ${errorData}` });
     }
 
     const data = await response.json();
@@ -200,6 +200,6 @@ ${JSON.stringify(companyKnowledge, null, 2)}`;
 
   } catch (error) {
     console.error('Chat API Error:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ reply: `SYSTEM ERROR (Internal): ${(error as Error).message}` });
   }
 }

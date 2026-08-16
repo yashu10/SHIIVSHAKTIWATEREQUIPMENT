@@ -21,18 +21,31 @@ Company Data:
 ${JSON.stringify(companyKnowledge, null, 2)}`;
 
     // Format history for Anthropic API
-    // The Anthropic API expects messages in the format: { role: 'user' | 'assistant', content: string }
-    const messages = [];
+    // The Anthropic API expects messages to start with a 'user' role and alternate.
+    const messages: { role: string, content: string }[] = [];
     
     if (history && Array.isArray(history)) {
       history.forEach((msg) => {
         if (msg.role === 'user' || msg.role === 'assistant') {
-          messages.push({ role: msg.role, content: msg.content });
+          // Skip leading assistant messages
+          if (messages.length === 0 && msg.role === 'assistant') {
+            return;
+          }
+          // Merge consecutive messages of the same role
+          if (messages.length > 0 && messages[messages.length - 1].role === msg.role) {
+            messages[messages.length - 1].content += "\n" + msg.content;
+          } else {
+            messages.push({ role: msg.role, content: msg.content });
+          }
         }
       });
     }
 
-    messages.push({ role: 'user', content: message });
+    if (messages.length > 0 && messages[messages.length - 1].role === 'user') {
+      messages[messages.length - 1].content += "\n" + message;
+    } else {
+      messages.push({ role: 'user', content: message });
+    }
 
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -42,7 +55,7 @@ ${JSON.stringify(companyKnowledge, null, 2)}`;
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
+        model: 'claude-3-5-sonnet-20241022',
         max_tokens: 1024,
         system: systemPrompt,
         messages: messages

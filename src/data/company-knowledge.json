@@ -1,0 +1,287 @@
+{
+  "companyInfo": {
+    "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    "founded": 1998,
+    "certifications": ["ISO 9001:2015", "BIS (Bureau of Indian Standards)", "CE marking"],
+    "headquarters": "Ahmedabad, Gujarat, India",
+    "exportMarkets": ["Africa", "Middle East", "Southeast Asia", "South America"],
+    "contact": {
+      "phone": "+91 9712666160",
+      "email": "info@shivshaktiwaterequipment.com",
+      "whatsappLink": "https://wa.me/919712666160"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What types of filling machines do you manufacture?",
+      "answer": "We manufacture a comprehensive range of filling machines including Water Filling Machines, Juice Filling Machines, Soda Filling Machines, Beer Filling Machines, and Oil Filling Machines. All our machines are designed with food-grade stainless steel (SS304/SS316) and comply with international hygiene and safety standards."
+    },
+    {
+      "question": "Do you provide turnkey project solutions?",
+      "answer": "Yes! We specialize in complete turnkey projects for packaged drinking water plants and beverage production lines. This includes everything from R.O. plant installation, blow moulding, filling & capping machines, labelling, batch coding, shrink wrapping, to final packaging — all under one roof."
+    },
+    {
+      "question": "Do you export machinery internationally?",
+      "answer": "Absolutely. We have successfully exported our machinery to over 25+ countries across Africa, the Middle East, Southeast Asia, and South America. Our machines are designed to meet international quality standards with CE marking and ISO certification."
+    },
+    {
+      "question": "What certifications does your company hold?",
+      "answer": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is an ISO 9001:2015 certified company. Our products meet BIS (Bureau of Indian Standards) compliance, and we maintain rigorous quality checks through our in-house Chemical and Micro-Biology laboratories."
+    },
+    {
+      "question": "What kind of after-sales support do you offer?",
+      "answer": "We provide 24/7 technical support, on-site installation assistance, operator training, and a comprehensive warranty on all our machines. Our dedicated service team ensures minimal downtime with prompt spare parts delivery and remote troubleshooting support."
+    },
+    {
+      "question": "What is the production capacity of your machines?",
+      "answer": "Our filling machines are available in a wide range of capacities — from 1,000 bottles per hour (BPH) for small-scale operations to 12,000+ BPH for large-scale industrial production. We customize the capacity based on your specific requirements and budget."
+    },
+    {
+      "question": "What is the typical delivery and installation timeline?",
+      "answer": "Standard delivery timelines range from 30 to 60 days depending on machine complexity and customization requirements. Installation and commissioning typically take 5-10 days on-site, including full operator training and trial runs."
+    },
+    {
+      "question": "How can I get a quotation for my project?",
+      "answer": "Simply click the 'Request A Quote' button or call us directly at +91 9712666160. Share your production requirements, bottle sizes, and desired capacity — our engineering team will provide a detailed proposal with competitive pricing within 24 hours."
+    },
+    {
+      "question": "What is the cost of a water bottling plant in India?",
+      "answer": "The cost of a water bottling plant in India varies widely based on production capacity, automation level, and included components (like RO plant and blow moulding). A basic semi-automatic setup may start around ₹10-15 Lakhs, while high-speed, fully automatic turnkey plants can range from ₹40 Lakhs to over ₹1 Crore. Contact us for a precise quote."
+    },
+    {
+      "question": "How does an automatic blow moulding machine work?",
+      "answer": "An automatic PET blow moulding machine works by first heating PET preforms in an infrared oven until they become malleable. The preforms are then transferred into a custom bottle mould, where high-pressure compressed air stretches and blows the plastic into the final bottle shape before cooling and ejection."
+    },
+    {
+      "question": "What is the difference between RO plant and regular water filtration?",
+      "answer": "While regular filtration removes large particles and sediment, a Reverse Osmosis (RO) plant uses a semi-permeable membrane under high pressure to remove dissolved solids (TDS), heavy metals, bacteria, and viruses at a microscopic level, producing pure drinking water that meets stringent commercial standards."
+    },
+    {
+      "question": "How much space is required for a commercial RO and bottling plant?",
+      "answer": "Space requirements depend on the plant's capacity and machinery configuration. A compact 2000 LPH RO plant with a basic filling line might need 1,000 to 1,500 sq. ft. However, a fully automatic high-speed turnkey line typically requires 3,000 to 5,000 sq. ft. of covered industrial space to accommodate machinery, raw materials, and finished goods."
+    }
+  ],
+  "products": [
+    {
+      "name": "Water Filling Machine",
+      "category": "Bottle Filling Machines",
+      "url": "/products/water-filling-machine",
+      "specs": {
+        "Production Capacity": "20 to 300 Bottles Per Minute (BPM)",
+        "Bottle Size Supported": "200 ml to 2000 ml",
+        "Machine Construction": "Contact Parts: SS 316. Outer Body: SS 304",
+        "Power Requirement": "3 Phase, 440 V, 50Hz (5 kW - 15 kW)",
+        "Automation Level": "Fully Automatic Multi-Head Machine",
+        "Control System": "Delta / Mitsubishi PLC with 7\" Touch Screen"
+      }
+    },
+    {
+      "name": "Juice Filling Machine",
+      "category": "Bottle Filling Machines",
+      "url": "/products/juice-filling-machine",
+      "specs": {
+        "Production Capacity": "24 to 200 Bottles Per Minute (BPM)",
+        "Filling Temperature": "60°C to 95°C (Adjustable)",
+        "Bottle Type Compatibility": "Hot-fill PET, Glass Bottles",
+        "Material of Construction": "SS 316L (Highest Grade) for liquid contact",
+        "Cleaning Mechanism": "Integrated Dummy Cups for CIP",
+        "Control System": "Touch Panel HMI Data Logging"
+      }
+    },
+    {
+      "name": "Beer Filling Machine",
+      "category": "Bottle Filling Machines",
+      "url": "/products/beer-filling-machine",
+      "specs": {
+        "Production Capacity": "1000 to 12000 Bottles Per Hour",
+        "Bottle Type": "Standard Glass Beer Containers (330ml, 650ml)",
+        "Capping Type": "Crown Corking / ROPP Aluminum / Twist-off",
+        "Vacuum Pump": "Liquid ring extremely high-suction vacuum",
+        "Oxygen Pickup (TPO)": "Consistently under 0.05 mg/L",
+        "Sanitation Standard": "100% Steam-Sterilizable (SIP) capable"
+      }
+    },
+    {
+      "name": "Soda Filling Machine",
+      "category": "Bottle Filling Machines",
+      "url": "/products/soda-filling-machine",
+      "specs": {
+        "Production Capacity": "24 to 200 Bottles Per Minute (BPM)",
+        "Filling Method": "Isobaric / Counter-Pressure Filling",
+        "Bottle Size Supported": "200 ml to 2000 ml",
+        "Material of Construction": "SS 316 for contact parts, SS 304 frame",
+        "Operating Pressure": "Up to 6 Bar",
+        "Control System": "PLC with Touch Panel Interface"
+      }
+    },
+    {
+      "name": "Inkjet Batch Coding",
+      "category": "Batch Coding Machine",
+      "url": "/products/inkjet-batch-coding",
+      "specs": {
+        "Printing Lines": "1 to 4 Lines of Text/Numbers/Logos",
+        "Font Matrix": "5x5, 7x5, 9x7, 12x12, 16x16, 24x24",
+        "Print Speed": "Up to 300 m/min (Single Line 7x5)",
+        "Print Distance": "2mm to 15mm from product surface",
+        "Consumables": "Dye-based Black, Colored, and UV-readable Inks",
+        "Data Input": "USB interface, Ethernet, RS232"
+      }
+    },
+    {
+      "name": "Sticker Labelling Machine",
+      "category": "Labeling Machine",
+      "url": "/products/sticker-labelling-machine",
+      "specs": {
+        "Labeling Speed": "40 to 150 Bottles Per Minute",
+        "Label Roll Diameter": "Max Inner 76mm / Max Outer 300mm",
+        "Label Type": "Self-adhesive paper, transparent film, metalized",
+        "Dispensing Motor": "High Torque Servo / Stepper Motor",
+        "Accuracy": "± 1.0 mm",
+        "Power Requirement": "Single Phase, 220V, 50Hz, 1.5 kW"
+      }
+    },
+    {
+      "name": "BOPP Labelling Machine",
+      "category": "Labeling Machine",
+      "url": "/products/bopp-labelling-machine",
+      "specs": {
+        "Production Speed": "100 to 300 Bottles Per Minute",
+        "Label Material": "BOPP Film, OPP, Paper Wrap",
+        "Container Types": "PET Round & Square, Glass Round",
+        "Glue Type": "Standard Hot Melt Adhesive (Operating 130°C-160°C)",
+        "Cutting Mechanism": "Rotary Knife on Central Drum",
+        "Machine Weight": "Approx ~1500 KG to 3000 KG"
+      }
+    },
+    {
+      "name": "Chemical Lab Equipment",
+      "category": "Lab for Testing",
+      "url": "/products/chemical-lab",
+      "specs": {
+        "Compliance Standard": "As per IS:14543 / IS:13428 / WHO",
+        "Digital Equipment Included": "pH Meter, TDS Meter, Conductivity Meter, Turbidity Meter",
+        "Analytical Balance": "Precision level up to 0.1 mg",
+        "Heating Tools": "Digital Hot Plate / Water Bath",
+        "Glassware Grade": "Borosilicate 3.3 Lab Grade",
+        "Chemicals": "Initial supply of standard testing Reagents & Buffers"
+      }
+    },
+    {
+      "name": "Industrial R.O. Plant",
+      "category": "R.O Plant",
+      "url": "/products/r-o-plant",
+      "specs": {
+        "Plant Capacity": "500 LPH to 50,000 LPH options",
+        "Pre-Filtration": "Sand Media / Activated Carbon / Micron Filters",
+        "High Pressure Pump": "Vertical Multistage SS pump (Grundfos / CNP)",
+        "RO Membrane Element": "Dow Filmtec / Toray / Hydranautics (8040 / 4040)",
+        "Recovery Rate": "50% to 75% depending on Feed Water TDS",
+        "Disinfection Stage": "UV Sterilizer + Automatic Ozone System"
+      }
+    },
+    {
+      "name": "Fully Automatic Shrink Wrapping Machine",
+      "category": "Shrink Wrapping Machine",
+      "url": "/products/fully-automatic-shrink-wrapping-machine",
+      "specs": {
+        "Packing Speed": "8 to 15 Packs (Bundles) Per Minute",
+        "Film Material Used": "LDPE Shrink Film (50 to 100 Microns)",
+        "Bottle Collation Formats": "12, 24, 30 bottles per pack",
+        "Heating Tunnel Temp": "Adjustable 150°C to 220°C",
+        "Sealing Blade Mechanism": "Pneumatic powered hot knife (Teflon Coated)",
+        "Power Consumption": "3 Phase, 440V, Approx 18 kW to 24 kW"
+      }
+    },
+    {
+      "name": "Semi Automatic Shrink Wrapping Machine",
+      "category": "Shrink Wrapping Machine",
+      "url": "/products/semi-automatic-shrink-wrapping-machine",
+      "specs": {
+        "Packing Speed": "4 to 7 Packs Per Minute (Operator Dependent)",
+        "Operation Type": "Semi-Auto (Manual grouping, Auto sealing/shrinking)",
+        "Film Used": "LDPE Shrink Film",
+        "Pneumatic Air Supply": "5 to 6 Bar Compressor required",
+        "Tunnel Dimensions": "Varies; typically 1500mm Length x 600mm Width",
+        "Power Input": "3 Phase, 440V, Approx 15 kW Elements"
+      }
+    },
+    {
+      "name": "Fully Automatic Blow Moulding Machine",
+      "category": "Pet Blow molding Machine",
+      "url": "/products/fully-automatic-blow-moulding-machine",
+      "specs": {
+        "Production Capacity": "2000 to 6000 Bottles Per Hour (Based on cavities)",
+        "Number of Cavities": "2, 4, 6 cavity mold options",
+        "Max Bottle Volume": "2.0 Liters (Standard Model)",
+        "Air Compressor Needs": "High Pressure (30 Bar) + Low Pressure (8 Bar)",
+        "Clamping Force": "Pneumatic or Servo Toggle (High Tonnage)",
+        "Control Interface": "Advanced Touchscreen PLC with fault logging"
+      }
+    },
+    {
+      "name": "Semi Automatic Blow Moulding Machine",
+      "category": "Pet Blow molding Machine",
+      "url": "/products/semi-automatic-blow-moulding-machine",
+      "specs": {
+        "Production Capacity": "800 to 1200 Bottles Per Hour (1L Size)",
+        "Heating Zones": "Adjustable Infrared Heaters with rotation",
+        "Max Bottle Size": "Options available to blow 20 Liter / 5 Gallon Jars",
+        "Mode of Operation": "Manual preform load, Auto Blow Cycle",
+        "Mold Clamping": "Pneumatic / Hydro-Pneumatic Toggle",
+        "Required Air": "High Pressure (25-30 Bar) Compressor Required"
+      }
+    },
+    {
+      "name": "Milk & Dairy Filling Machine",
+      "category": "Liquid Filling Machines",
+      "url": "/products/milk-dairy-filling-machine",
+      "specs": {
+        "Production Capacity": "24 to 150 Bottles Per Minute (BPM)",
+        "Filling Temperature": "Ambient or Cold Fill",
+        "Bottle Size Supported": "200 ml to 1000 ml",
+        "Material of Construction": "SS 316L for all liquid contact parts",
+        "Cleaning Mechanism": "Fully Automated CIP System",
+        "Control System": "PLC with Touch Screen Interface"
+      }
+    },
+    {
+      "name": "Edible Oil Filling Machine",
+      "category": "Liquid Filling Machines",
+      "url": "/products/edible-oil-filling-machine",
+      "specs": {
+        "Production Capacity": "20 to 120 Bottles Per Minute (BPM)",
+        "Filling Accuracy": "+/- 0.5% of fill volume",
+        "Bottle Size Supported": "500 ml to 5000 ml (5 Liters)",
+        "Filling Mechanism": "Servo Volumetric Piston / Mass Flow Meter",
+        "Nozzle Type": "Pneumatic Positive Shut-Off",
+        "Control System": "Advanced PLC with Recipe Memory"
+      }
+    },
+    {
+      "name": "Hand Wash Filling Machine",
+      "category": "Liquid Filling Machines",
+      "url": "/products/hand-wash-filling-machine",
+      "specs": {
+        "Production Capacity": "30 to 100 Bottles Per Minute (BPM)",
+        "Filling Accuracy": "+/- 1%",
+        "Bottle Size Supported": "100 ml to 1000 ml",
+        "Filling Mechanism": "Volumetric Piston / Gear Pump",
+        "Nozzle Type": "Diving Anti-Foam Nozzles",
+        "Material of Construction": "SS 316L Contact Parts"
+      }
+    },
+    {
+      "name": "Chemical & Pesticide Filling Machine",
+      "category": "Liquid Filling Machines",
+      "url": "/products/chemical-pesticide-filling-machine",
+      "specs": {
+        "Production Capacity": "20 to 80 Bottles Per Minute (BPM)",
+        "Filling Accuracy": "+/- 0.5%",
+        "Bottle Size Supported": "100 ml to 5000 ml",
+        "Material of Construction": "Specialized Anti-Corrosive Plastics / Alloys",
+        "Safety Features": "Fume Extraction, Enclosed Chamber",
+        "Control System": "Isolated PLC Control Panel"
+      }
+    }
+  ]
+}

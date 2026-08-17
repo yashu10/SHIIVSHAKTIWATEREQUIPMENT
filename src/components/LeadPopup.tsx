@@ -29,7 +29,7 @@ export const LeadPopup: React.FC = () => {
     
     // If it was a brochure request, open the brochure immediately to prevent popup blockers
     if (leadPopupType === "brochure") {
-      window.open(encodeURI("/assets/images/SHIIV SHAKTI Broucher.pdf"), "_blank");
+      window.open(encodeURI("/assets/images/Shiv Shakti Broucher.pdf"), "_blank");
     }
 
     const message = `Hello, I am interested in ${leadPopupType === "quote" ? "a Quote" : "downloading the Brochure"}.\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nEmail: ${formData.email}\nRequirement: ${formData.requirement}`;

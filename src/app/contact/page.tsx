@@ -53,22 +53,22 @@ export default function Contact() {
           <div className="contact-info-grid animate-on-scroll">
             <div className="contact-info-card">
               <i className="fa-solid fa-building"></i>
-              <h3>Office & Factory Address</h3>
+              <h3>Office Address</h3>
               <p>
-                Plot No. B/5, Revabhai Industrial Estate, Part-2,
+                309, Ganesh Imperial, Near Podar School,
                 <br />
-                Opp. Ishwarkrupa Weighbridge,
-                <br />
-                CTM, Ahmedabad - 380026.
+                S.P. Ring Road, Ahmedabad - 382418. (Gujarat)
               </p>
             </div>
             <div className="contact-info-card">
-              <i className="fa-solid fa-envelope"></i>
-              <h3>Email Us</h3>
+              <i className="fa-solid fa-industry"></i>
+              <h3>Factory Address</h3>
               <p>
-                contact@shivshaktiwaterequipment.com
+                B-5, Revabhai Industrial Estate,
                 <br />
-                info@shivshaktiwaterequipment.com
+                Opp. Ishwar Krupa Weight Bridge,
+                <br />
+                CTM, Ahmedabad - 380026.
               </p>
             </div>
             <div className="contact-info-card">
@@ -83,7 +83,7 @@ export default function Contact() {
               </p>
               <p style={{ marginTop: "10px" }}>
                 <i className="fa-solid fa-envelope" style={{ fontSize: "0.9rem", marginRight: "5px", color: "var(--primary)" }}></i>
-                contact@shivshaktiwaterequipment.com
+                shivshakti2932@yahoo.com
               </p>
             </div>
           </div>

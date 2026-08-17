@@ -46,7 +46,9 @@ export const Footer: React.FC = () => {
             </Link>
             <div className="social-links">
               <a href="https://www.facebook.com/share/1ayi4yDzHA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
               <a href="https://www.instagram.com/shivshaktiwatersolution?igsh=ZGlvanBjcGtuOXR2" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
               <a href="https://youtube.com/@0508pradip?si=oyYaSQHBArGgwJog" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
             </div>
           </div>
@@ -112,7 +114,7 @@ export const Footer: React.FC = () => {
             </p>
             <p>
               <i className="fa-solid fa-envelope" style={{ marginRight: "8px", color: "var(--accent)" }}></i>
-              contact@shivshaktiwaterequipment.com
+              shivshakti2932@yahoo.com
             </p>
           </div>
         </div>
@@ -130,7 +132,7 @@ export const Footer: React.FC = () => {
             <i className="fa-solid fa-envelope"></i>
             <div className="action-text">
               <span>Email Us:</span>
-              <strong>contact@shivshaktiwaterequipment.com</strong>
+              <strong>shivshakti2932@yahoo.com</strong>
             </div>
           </div>
           <div className="action-item">

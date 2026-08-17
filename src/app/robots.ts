@@ -10,11 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/"],
       },
-      {
-        userAgent: ["GPTBot", "PerplexityBot", "ClaudeBot", "Google-Extended", "CCBot"],
-        allow: "/",
-      }
     ],
-    sitemap: "https://shivshaktiwaterequipment.com/sitemap.xml",
+    sitemap: "https://www.shivshaktiengineering.com/sitemap.xml",
   };
 }

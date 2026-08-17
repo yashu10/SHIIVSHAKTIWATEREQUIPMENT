@@ -5,7 +5,7 @@ import blogsData from "../data/blogs.json";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://shivshaktiwaterequipment.com";
+  const baseUrl = "https://www.shivshaktiengineering.com";
 
   // Static routes
   const staticRoutes: MetadataRoute.Sitemap = [

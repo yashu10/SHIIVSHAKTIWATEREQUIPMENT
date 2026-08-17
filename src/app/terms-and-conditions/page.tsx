@@ -2,9 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  alternates: {
-    canonical: "/terms-and-conditions",
-  },
   title: "Terms & Conditions | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
   description: "Terms and Conditions governing the use of the SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. B2B portal.",
 };

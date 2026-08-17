@@ -7,7 +7,7 @@
         "seoDesc": "Leading manufacturer of automatic mineral water filling machines in India. High-speed washing, filling & capping for PET bottles. Request a quote today.",
         "tagline": "High-Speed Monoblock Water Bottling Solutions",
         "overview": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. manufactures heavy-duty, fully automatic Mineral Water Filling Machines designed for modern bottling plants. Our reliable 3-in-1 monoblock system integrates washing, filling, and capping into a single, compact framed unit. Built completely from SS 304/316 contact parts, it ensures 100% hygienic water packaging suitable for pack sizes ranging from 200ml to 2000ml. Engineered for minimal downtime and maximal precision, our filling lines help you achieve incredible production throughput while strictly adhering to international purity standards.",
-        "image": "Product/water-filling-machine.png",
+        "image": "Product/WATER Filling Machine.png",
         "topFeatures": [
             "Output capacity from 20 BPM up to 300 BPM",
             "Suitable for 200ml to 2000ml PET/Glass bottles",
@@ -57,8 +57,7 @@
                 "k": "Control System",
                 "v": "Delta / Mitsubishi PLC with 7\" Touch Screen"
             }
-        ],
-        "aeoAnswer": "A water filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 300 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 2000 ml."
+        ]
     },
     {
         "filename": "juice-filling-machine.html",
@@ -68,7 +67,7 @@
         "seoDesc": "Premium hot juice filling machines designed for fruit juices, pulps, and RTS beverages. Advanced temperature consistency and hygiene features.",
         "tagline": "Advanced Hot Fill Technology for Beverages",
         "overview": "Our Automatic Juice Filling Machines are specially designed for hot-fill applications, perfect for fruit juices, nectar, iced tea, and flavoured milk. Maintaining a consistent temperature is critical in juice packaging to ensure product shelf life and prevent contamination. Our machinery features a state-of-the-art recirculation system to maintain juice temperature right up to the filling nozzle. Designed with an advanced micro-negative pressure filling method, it delivers rapid, extremely precise fills without bubbling or overflow.",
-        "image": "Product/juice-filling-machine.png",
+        "image": "Product/Juice Filling Machine.png",
         "topFeatures": [
             "Micro-negative pressure hot filling (Up to 95°C)",
             "Automatic product recirculation system",
@@ -118,8 +117,7 @@
                 "k": "Control System",
                 "v": "Touch Panel HMI Data Logging"
             }
-        ],
-        "aeoAnswer": "A juice filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 200 Bottles Per Minute."
+        ]
     },
     {
         "filename": "beer-filling-machine.html",
@@ -128,8 +126,8 @@
         "seoTitle": "Commercial Beer Filling Machine | Microbrewery Bottling",
         "seoDesc": "Double pre-evacuation beer filling equipment ensuring near-zero dissolved oxygen. Robust stainless steel bottling for breweries.",
         "tagline": "Oxygen-Free Bottling for Craft and Commercial Breweries",
-        "overview": "The greatest enemy of fresh beer is oxygen. The SHIIV SHAKTI Beer Filling Machine is engineered with rigorous double pre-evacuation technology designed to flush bottles with CO2 multiple times before filing. This dramatically reduces dissolved oxygen (DO) pickup, drastically extending the shelf life and preserving the authentic flavor profile of your brew. Combining a long-tube filling mechanism to minimize agitation, and ultra-hygienic automated capping/crowning, it is the ultimate, affordable scaling solution for microbreweries and large-scale beer manufacturers alike.",
-        "image": "Product/beer-filling-machine.png",
+        "overview": "The greatest enemy of fresh beer is oxygen. The Shiv Shakti Beer Filling Machine is engineered with rigorous double pre-evacuation technology designed to flush bottles with CO2 multiple times before filing. This dramatically reduces dissolved oxygen (DO) pickup, drastically extending the shelf life and preserving the authentic flavor profile of your brew. Combining a long-tube filling mechanism to minimize agitation, and ultra-hygienic automated capping/crowning, it is the ultimate, affordable scaling solution for microbreweries and large-scale beer manufacturers alike.",
+        "image": "Product/Beer Filling Machine.png",
         "topFeatures": [
             "Double pre-evacuation vacuum flushing",
             "Long-tube low-agitation liquid dispensing",
@@ -179,8 +177,7 @@
                 "k": "Sanitation Standard",
                 "v": "100% Steam-Sterilizable (SIP) capable"
             }
-        ],
-        "aeoAnswer": "A beer filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 1000 to 12000 Bottles Per Hour."
+        ]
     },
     {
         "filename": "soda-filling-machine.html",
@@ -190,7 +187,7 @@
         "seoDesc": "High-pressure isobaric filling machines for soda and CSD. Prevent flat drinks with our precision counter-pressure bottling equipment.",
         "tagline": "Isobaric Precision for Carbonated Soft Drinks (CSD)",
         "overview": "Bottling carbonated beverages requires exact pressure handling. Our Automatic Soda Filling Machines utilize highly advanced iso-baric (counter-pressure) filling principles. Before the liquid enters the bottle, the pressure inside the bottle is equalized with the filler bowl, resulting in absolutely zero foaming or degassing. Perfect for club soda, sparkling water, and fizzy soft drinks. Backed by heavy pneumatic systems and leak-immune piping, our machine ensures your product stays highly carbonated from the plant to the customer's glass.",
-        "image": "Product/soda-filling-machine.png",
+        "image": "Product/soda filling machine.png",
         "topFeatures": [
             "Advanced Counter-Pressure (Isobaric) Filling",
             "Anti-foaming operation technology",
@@ -240,8 +237,7 @@
                 "k": "Control System",
                 "v": "PLC with Touch Panel Interface"
             }
-        ],
-        "aeoAnswer": "A soda filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 200 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 2000 ml."
+        ]
     },
     {
         "filename": "inkjet-batch-coding.html",
@@ -251,7 +247,7 @@
         "seoDesc": "Continuous inkjet (CIJ) batch coding machines for printing MRP, Expiry, and Batch numbers on bottles at high speeds. Zero downtime printing.",
         "tagline": "High-Velocity Clarity for Production Traceability",
         "overview": "Ensure flawless compliance and product traceability with our Continuous Inkjet (CIJ) Batch Coding machines. Designed to seamlessly integrate directly over your conveyor lines, it prints dynamic information including Manufacturing Dates, Expiry Dates, MRP, Lot Numbers, and Barcodes in real-time. Whether printing on curved PET shoulders, damp glass, or flexible shrink wrap, the non-contact printhead guarantees crisp, instantly-drying text without slowing down production speed. The system is self-cleaning and engineered to prevent nozzle clogging during idle shifts.",
-        "image": "Product/inkjet-batch-coding-machine.png",
+        "image": "Product/Inkjet Batch Coding.png",
         "topFeatures": [
             "Non-contact continuous inkjet (CIJ) technology",
             "High-speed precision (up to 300 meters/min)",
@@ -301,8 +297,7 @@
                 "k": "Data Input",
                 "v": "USB interface, Ethernet, RS232"
             }
-        ],
-        "aeoAnswer": "A inkjet batch coding is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from Up to 300 m/min (Single Line 7x5)."
+        ]
     },
     {
         "filename": "sticker-labelling-machine.html",
@@ -312,7 +307,7 @@
         "seoDesc": "High-precision wrap-around and double-sided sticker labelling machines for PET/Glass bottles. Servo-driven accuracy for flawless aesthetics.",
         "tagline": "Flawless Branding Application at Every Speed",
         "overview": "First impressions matter on retail shelves. Our Fully Automatic Sticker Labelling Machines guarantee perfect, bubble-free label placement every single time. Utilizing high-end servo or stepper motor technology, the machine continuously dispenses self-adhesive pressure-sensitive sticker labels onto passing bottles with an accuracy of ±1mm. Designed to handle round, flat, square, and oval containers, the highly adjustable applicator heads and heavy-duty conveyor synchronization make it a versatile asset for food, pharma, and beverage industries.",
-        "image": "Product/sticker-labelling-machine.png",
+        "image": "Product/Sticker Labelling Machine.png",
         "topFeatures": [
             "Partial, full wrap-around, or multi-side application",
             "No-Bottle, No-Label optical sensing",
@@ -362,8 +357,7 @@
                 "k": "Power Requirement",
                 "v": "Single Phase, 220V, 50Hz, 1.5 kW"
             }
-        ],
-        "aeoAnswer": "A sticker labelling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 40 to 150 Bottles Per Minute."
+        ]
     },
     {
         "filename": "bopp-labelling-machine.html",
@@ -423,8 +417,7 @@
                 "k": "Machine Weight",
                 "v": "Approx ~1500 KG to 3000 KG"
             }
-        ],
-        "aeoAnswer": "A bopp labelling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 100 to 300 Bottles Per Minute."
+        ]
     },
     {
         "filename": "chemical-lab.html",
@@ -434,7 +427,7 @@
         "seoDesc": "Comprehensive chemical lab equipment setups for mineral water testing. Ensure your water meets rigorous IS/ WHO safety and pH standards.",
         "tagline": "Absolute Certainty in Water Chemistry",
         "overview": "Quality cannot be guessed; it must be quantified. We provide complete, turn-key Chemical Laboratory equipment grids required for any commercial Packaged Drinking Water plant. From maintaining optimal pH and balancing Total Dissolved Solids (TDS), to detecting hard metals and determining precise ozone levels, our standardized lab tools ensure you continually pass rigorous IS-14543 and WHO standards. This empowers your in-house chemists with accurate, immediate feedback regarding your plant's internal purification health.",
-        "image": "Product/chemical-lab-equipment.png",
+        "image": "Product/Chemical Lab.png",
         "topFeatures": [
             "Complete compliance with BIS regulations",
             "High-precision digital TDS and pH meters",
@@ -484,8 +477,7 @@
                 "k": "Chemicals",
                 "v": "Initial supply of standard testing Reagents & Buffers"
             }
-        ],
-        "aeoAnswer": "A chemical lab equipment is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency."
+        ]
     },
     {
         "filename": "r-o-plant.html",
@@ -495,7 +487,7 @@
         "seoDesc": "Heavy-duty Industrial Reverse Osmosis (R.O.) plants for mineral water manufacturing. Multi-stage filtration delivering extremely pure water outputs.",
         "tagline": "The Heart of Purity: Multi-Stage Reverse Osmosis",
         "overview": "The core of any successful bottling business begins with the highest quality of raw water purification. Our Industrial Reverse Osmosis (RO) plants are engineered to strip bore-well, municipal, or river water of 99% of dissolved solids, heavy metals, pesticides, and microbial contaminants. Utilizing heavy-duty high pressure feed pumps along with premium Dow/Hydranautics membranes, the system operates constantly with immense reliability. It comes fully integrated with multimedia sand filters, activated carbon systems, antiscalant dosing, and UV/Ozone final treatments, guaranteeing sweet-tasting, crystal clear drinking water.",
-        "image": "Product/industrial-ro-plant.png",
+        "image": "Product/Industrial R.O. Plant.png",
         "topFeatures": [
             "Output capacities scaling from 500 LPH to 20,000+ LPH",
             "Comprehensive Multi-stage pre-filtration array",
@@ -545,8 +537,7 @@
                 "k": "Disinfection Stage",
                 "v": "UV Sterilizer + Automatic Ozone System"
             }
-        ],
-        "aeoAnswer": "A industrial r.o. plant is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 500 LPH to 50,000 LPH options."
+        ]
     },
     {
         "filename": "fully-automatic-shrink-wrapping-machine.html",
@@ -556,7 +547,7 @@
         "seoDesc": "Automotive high-speed web sealer and shrink wrapping machines. Bundle wrap water bottles efficiently with PE film directly inline.",
         "tagline": "Inline Heavy-Duty Bulk Bundling Solutions",
         "overview": "Ditch the expensive corrugated cardboard cartons and utilize efficient PE film grouping. Our Fully Automatic Shrink Wrapping (Web Sealer) machines seamlessly connect directly to the end of your bottle packaging line. It automatically accumulates arriving bottles, groups them into matrices (e.g., 3x4, 4x6), wraps them tightly in a sleeve of heavy-duty Polyethylene (PE) shrink film, and conveys them through an industrial heat tunnel. They emerge tightly bound, sturdy, and ready to be loaded onto shipping pallets without any manual labor overhead.",
-        "image": "Product/fully-automatic-shrink-wrapping-machine.png",
+        "image": "Product/Fully Automatic Shrink Wrapping Machine.png",
         "topFeatures": [
             "Fully inline automatic collation & grouping",
             "Heavy-duty heating tunnel with turbulent fans",
@@ -606,8 +597,7 @@
                 "k": "Power Consumption",
                 "v": "3 Phase, 440V, Approx 18 kW to 24 kW"
             }
-        ],
-        "aeoAnswer": "A fully automatic shrink wrapping machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 8 to 15 Packs (Bundles) Per Minute."
+        ]
     },
     {
         "filename": "semi-automatic-shrink-wrapping-machine.html",
@@ -617,7 +607,7 @@
         "seoDesc": "Affordable and highly durable semi-automatic shrink wrapping machines for medium scale water and beverage bottling setups.",
         "tagline": "Affordable & Assured Bulk Packaging",
         "overview": "Perfect for start-ups and medium-scale bottling operations, our Semi-Automatic Web Sealer & Shrink Wrapping machine provides the same robust final packaging quality as fully automatic systems, but at a fraction of the capital investment. An operator simply places the grouped bottles (or a pre-filled tray) onto the feeding platform and presses a button. The pneumatic pusher drives the bottles through the film curtain, the heated jaw seals the sleeve, and the bundle smoothly rolls through the high-temperature shrink tunnel, emerging factory-tight.",
-        "image": "Product/semi-automatic-shrink-wrapping-machine.png",
+        "image": "Product/Semi Automatic Shrink Wrapping Machine.png",
         "topFeatures": [
             "User-friendly dual-push button safety operation",
             "Pneumatically driven sealing and pushing rams",
@@ -667,8 +657,7 @@
                 "k": "Power Input",
                 "v": "3 Phase, 440V, Approx 15 kW Elements"
             }
-        ],
-        "aeoAnswer": "A semi automatic shrink wrapping machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 4 to 7 Packs Per Minute (Operator Dependent)."
+        ]
     },
     {
         "filename": "fully-automatic-blow-moulding-machine.html",
@@ -678,7 +667,7 @@
         "seoDesc": "High-speed automatic PET stretch blow moulding machines. Manufacture your own PET bottles instantly on your production floor.",
         "tagline": "Uninterrupted High-Speed Bottle Manufacturing",
         "overview": "Eliminate the massive logistical costs of transporting empty bottles by manufacturing them exactly when you need them. The Fully Automatic PET Stretch Blow Moulding Machine takes compact, cheap PET preforms and magically stretches and blows them into finalized bottles at intense speeds. Featuring an automatic preform hopper, infrared heating ovens with independent zone control, and heavy-tonnage pneumatic clamping, this machine connects directly via air conveyors to your filling line. It is the pinnacle of vertical integration for modern packaging plants.",
-        "image": "Product/fully-automatic-blow-moulding-machine.png",
+        "image": "Product/Fully Automatic Blow Moulding Machine.png",
         "topFeatures": [
             "Fully automated preform feeding to bottle ejection",
             "Advanced Infrared (IR) rotary heating ovens",
@@ -728,8 +717,7 @@
                 "k": "Control Interface",
                 "v": "Advanced Touchscreen PLC with fault logging"
             }
-        ],
-        "aeoAnswer": "A fully automatic blow moulding machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 2000 to 6000 Bottles Per Hour (Based on cavities). It supports pack sizes ranging from 2.0 Liters (Standard Model)."
+        ]
     },
     {
         "filename": "semi-automatic-blow-moulding-machine.html",
@@ -789,8 +777,7 @@
                 "k": "Required Air",
                 "v": "High Pressure (25-30 Bar) Compressor Required"
             }
-        ],
-        "aeoAnswer": "A semi automatic blow moulding machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 800 to 1200 Bottles Per Hour (1L Size). It supports pack sizes ranging from Options available to blow 20 Liter / 5 Gallon Jars."
+        ]
     },
     {
         "filename": "milk-dairy-filling-machine.html",
@@ -850,8 +837,7 @@
                 "k": "Control System",
                 "v": "PLC with Touch Screen Interface"
             }
-        ],
-        "aeoAnswer": "A milk & dairy filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 24 to 150 Bottles Per Minute. It supports pack sizes ranging from 200 ml to 1000 ml."
+        ]
     },
     {
         "filename": "edible-oil-filling-machine.html",
@@ -911,8 +897,7 @@
                 "k": "Control System",
                 "v": "Advanced PLC with Recipe Memory"
             }
-        ],
-        "aeoAnswer": "A edible oil filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 120 Bottles Per Minute. It supports pack sizes ranging from 500 ml to 5000 ml (5 Liters)."
+        ]
     },
     {
         "filename": "hand-wash-filling-machine.html",
@@ -972,8 +957,7 @@
                 "k": "Material of Construction",
                 "v": "SS 316L Contact Parts"
             }
-        ],
-        "aeoAnswer": "A hand wash filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 30 to 100 Bottles Per Minute. It supports pack sizes ranging from 100 ml to 1000 ml."
+        ]
     },
     {
         "filename": "chemical-pesticide-filling-machine.html",
@@ -983,7 +967,7 @@
         "seoDesc": "Corrosion-resistant filling machines for harsh chemicals, pesticides, and fertilizers. Safe, enclosed, and highly accurate.",
         "tagline": "Safe and Precise Bottling for Harsh Chemicals",
         "overview": "Handling hazardous chemicals, pesticides, and agrochemicals requires specialized equipment that prioritizes safety, durability, and extreme accuracy. Our Chemical & Pesticide Filling Machines are built with ultra-corrosion-resistant materials like Titanium, PTFE, and High-Density Plastics where necessary. Featuring fully enclosed filling chambers and specialized exhaust systems, they protect operators from toxic fumes while delivering rapid, highly accurate fills.",
-        "image": "Product/chemical-lab-equipment.png",
+        "image": "Product/Chemical Lab.png",
         "topFeatures": [
             "Ultra-corrosion-resistant construction (PTFE/Titanium)",
             "Fully enclosed safety chamber with fume extraction",
@@ -1033,7 +1017,6 @@
                 "k": "Control System",
                 "v": "Isolated PLC Control Panel"
             }
-        ],
-        "aeoAnswer": "A chemical & pesticide filling machine is an industrial automated system used to process and package products for commercial plants. It is engineered for high throughput and efficiency. Typical production capacities range from 20 to 80 Bottles Per Minute. It supports pack sizes ranging from 100 ml to 5000 ml."
+        ]
     }
 ]

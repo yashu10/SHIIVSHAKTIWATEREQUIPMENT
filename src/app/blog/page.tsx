@@ -4,38 +4,15 @@ import { BlogListClient } from "../../components/BlogListClient";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Latest Insights & News | SHIIV SHAKTI Water Equipment",
+  title: "Latest Insights & News | Shiv Shakti Water Equipment",
   description: "Read our latest articles on industry trends, maintenance tips, sustainability, and quality control in the bottling and packaging industry.",
 };
 
 export default function BlogListing() {
   const categories = ["all", "Product Guide", "Industry Trends", "Maintenance Tips", "Sustainability", "Company News", "Quality Control"];
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://shivshaktiwaterequipment.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Blog",
-        "item": "https://shivshaktiwaterequipment.com/blog"
-      }
-    ]
-  };
-
   return (
     <main>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       {/* Page Header */}
       <section className="page-header pattern-bg active">
         <div className="container">

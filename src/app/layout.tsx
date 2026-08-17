@@ -7,7 +7,6 @@ import { Footer } from "../components/Footer";
 import { LeadPopup } from "../components/LeadPopup";
 import { VideoModal } from "../components/VideoModal";
 import { ScrollObserver } from "../components/ScrollObserver";
-import ChatWidget from "../components/ChatWidget";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +22,7 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const baseUrl = "https://shivshaktiwaterequipment.com";
+const baseUrl = "https://www.shivshaktiengineering.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
     "batch coding machine",
     "sticker labelling machine",
     "packaging machinery manufacturer India",
-    "SHIIV SHAKTI Water Equipment"
+    "Shiv Shakti Water Equipment"
   ],
   authors: [{ name: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD." }],
   creator: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
@@ -60,7 +59,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: baseUrl,
+  },
   icons: {
     icon: "/assets/images/fav_icon.png",
     shortcut: "/assets/images/fav_icon.png",
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Water Filling & Packaging Machinery",
+    title: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Industrial Bottling Machinery",
     description: "Trusted B2B manufacturer of water filling machines, RO plants, PET blow moulding, and packaging equipment.",
     images: [
       {
@@ -97,21 +98,20 @@ const jsonLdOrganization = {
       "@type": ["Organization", "LocalBusiness"],
       "@id": `${baseUrl}/#organization`,
       "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
-      "alternateName": "SHIIV SHAKTI Water Equipment",
+      "alternateName": "Shiv Shakti Water Equipment",
       "url": baseUrl,
       "logo": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "image": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "description": "Leading manufacturer & exporter of mineral water filling machinery, RO plants, PET blow moulding, and packaging equipment in India.",
-      "foundingDate": "1998",
-      "telephone": ["+919712666160", "+918490087773"],
-      "email": "contact@shivshaktiwaterequipment.com",
+      "telephone": "+919712666160",
+      "email": "info@shivshaktiengineering.com",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Plot No. B/5, Revabhai Industrial Estate, Part-2, Opp. Ishwarkrupa Weighbridge, CTM",
+        "streetAddress": "309, Ganesh Imperial, Near Podar School, S.P. Ring Road",
         "addressLocality": "Ahmedabad",
         "addressRegion": "Gujarat",
-        "postalCode": "380026",
+        "postalCode": "382418",
         "addressCountry": "IN"
       },
       "geo": {
@@ -119,26 +119,15 @@ const jsonLdOrganization = {
         "latitude": "23.0225",
         "longitude": "72.5714"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+919712666160",
-          "contactType": "sales",
-          "areaServed": "Global",
-          "availableLanguage": ["en", "hi", "gu"]
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+918490087773",
-          "contactType": "sales",
-          "areaServed": "Global",
-          "availableLanguage": ["en", "hi", "gu"]
-        }
-      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+919712666160",
+        "contactType": "sales",
+        "areaServed": "Global",
+        "availableLanguage": ["en", "hi", "gu"]
+      },
       "sameAs": [
-        "https://www.facebook.com/share/1ayi4yDzHA/?mibextid=wwXIfr",
-        "https://www.instagram.com/shivshaktiwatersolution?igsh=ZGlvanBjcGtuOXR2",
-        "https://youtube.com/@0508pradip?si=oyYaSQHBArGgwJog"
+        "https://wa.me/919712666160"
       ]
     },
     {
@@ -184,7 +173,6 @@ export default function RootLayout({
           <LeadPopup />
           <VideoModal />
           <ScrollObserver />
-          <ChatWidget />
         </UIProvider>
       </body>
     </html>

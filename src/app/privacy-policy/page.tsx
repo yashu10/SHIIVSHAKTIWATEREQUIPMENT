@@ -2,9 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 export const metadata = {
-  alternates: {
-    canonical: "/privacy-policy",
-  },
   title: "Privacy Policy | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
   description: "Privacy Policy for SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. regarding B2B lead generation and customer data handling.",
 };
@@ -35,7 +32,7 @@ export default function PrivacyPolicy() {
           <p>We implement industry-standard security measures to protect your personal information from unauthorized access.</p>
           <br />
           <h2>4. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at contact@shivshaktiwaterequipment.com.</p>
+          <p>If you have any questions about this Privacy Policy, please contact us at shivshakti2932@yahoo.com.</p>
         </div>
       </section>
     </main>

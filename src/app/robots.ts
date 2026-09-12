@@ -11,6 +11,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://www.shivshaktiengineering.com/sitemap.xml",
+    sitemap: "https://www.shivshaktiwaterequipment.com/sitemap.xml",
   };
 }

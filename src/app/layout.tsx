@@ -22,7 +22,7 @@ const outfit = Outfit({
   display: "swap",
 });
 
-const baseUrl = "https://www.shivshaktiengineering.com";
+const baseUrl = "https://www.shivshaktiwaterequipment.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -104,7 +104,7 @@ const jsonLdOrganization = {
       "image": `${baseUrl}/assets/images/shiv_shakti_logo.png`,
       "description": "Leading manufacturer & exporter of mineral water filling machinery, RO plants, PET blow moulding, and packaging equipment in India.",
       "telephone": "+919712666160",
-      "email": "info@shivshaktiengineering.com",
+      "email": "contact@shivshaktiwaterequipment.com",
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",

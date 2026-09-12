@@ -132,7 +132,7 @@ export const Footer: React.FC = () => {
             <i className="fa-solid fa-envelope"></i>
             <div className="action-text">
               <span>Email Us:</span>
-              <strong>shivshakti2932@yahoo.com</strong>
+              <strong>contact@shivshaktiwaterequipment.com</strong>
             </div>
           </div>
           <div className="action-item">

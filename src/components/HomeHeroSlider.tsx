@@ -7,18 +7,22 @@ export function HomeHeroSlider() {
   
   const slides = [
     {
+      img: "/assets/images/hero_machine_1.png",
       title: "Precision Engineering for the Beverage Industry",
       desc: "State-of-the-art washing, filling, and capping solutions tailored for high-volume production.",
     },
     {
+      img: "/assets/images/hero_machine_2.png",
       title: "Advanced Rinsing Systems",
       desc: "Ensuring maximum hygiene and efficiency for global standards.",
     },
     {
+      img: "/assets/images/hero_machine_3.png",
       title: "High-Speed Filling Technology",
       desc: "Robust, stainless steel construction designed for minimal downtime.",
     },
     {
+      img: "/assets/images/hero_machine_4.png",
       title: "Automated Capping Units",
       desc: "Securing your product with precision torque and reliable sealing.",
     },
@@ -40,37 +44,16 @@ export function HomeHeroSlider() {
   };
 
   return (
-    <section className="hero" id="home" style={{ position: "relative", overflow: "hidden" }}>
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          zIndex: 1,
-        }}
-      >
-        <source src="/assets/images/Video/Red%20White%20and%20Gray%20Modern%20Construction%20Safety%20Video.mp4" type="video/mp4" />
-      </video>
-
-      {/* Overlay to ensure text readability */}
-      <div className="slide-overlay" style={{ zIndex: 2 }}></div>
-
-      <div className="slider-container" id="heroSlider" style={{ zIndex: 3, position: "relative" }}>
+    <section className="hero" id="home">
+      <div className="slider-container" id="heroSlider">
         {slides.map((slide, idx) => (
           <div
             key={idx}
             className={`slide ${idx === currentSlide ? "active" : ""}`}
-            style={{ background: "transparent" }}
+            style={{ backgroundImage: `url('${slide.img}')` }}
           >
-            <div className="container slide-content" style={{ zIndex: 3 }}>
+            <div className="slide-overlay"></div>
+            <div className="container slide-content">
               {idx === 0 ? (
                 <h1 className="fade-up">{slide.title}</h1>
               ) : (
@@ -86,8 +69,7 @@ export function HomeHeroSlider() {
           </div>
         ))}
       </div>
-      
-      <div className="slider-controls" style={{ zIndex: 4, position: "absolute" }}>
+      <div className="slider-controls">
         <button className="slider-btn prev" onClick={handlePrevSlide} aria-label="Previous Slide">
           &#10094;
         </button>

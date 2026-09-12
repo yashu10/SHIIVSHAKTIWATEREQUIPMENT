@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
             </p>
             <p>
               <i className="fa-solid fa-envelope" style={{ marginRight: "8px", color: "var(--accent)" }}></i>
-              shivshakti2932@yahoo.com
+              contact@shivshaktiwaterequipment.com
             </p>
           </div>
         </div>

@@ -91,11 +91,6 @@ export default async function ProductPage(props: {
     "brand": {
       "@type": "Brand",
       "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "INR",
-      "availability": "https://schema.org/InStock"
     }
   };
 

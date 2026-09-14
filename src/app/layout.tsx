@@ -27,10 +27,10 @@ const baseUrl = "https://www.shivshaktiwaterequipment.com";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. | Water Filling & Packaging Machinery",
-    template: "%s | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+    default: "RO Plant & Water Filling Machine Manufacturer in Ahmedabad | Shiv Shakti Water Equipment",
+    template: "%s | Shiv Shakti Water Equipment",
   },
-  description: "Leading manufacturer & exporter of mineral water filling machinery, RO plants, PET blow moulding, and packaging equipment since 1998. ISO 9001:2015 certified.",
+  description: "Ahmedabad-based manufacturer & exporter of Industrial R.O. Plants, water/juice/soda filling machines & turnkey bottling lines since 1998. ISO 9001:2015 certified, 25+ countries exported.",
   keywords: [
     "mineral water plant",
     "bottle filling machine",

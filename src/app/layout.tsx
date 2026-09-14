@@ -89,6 +89,9 @@ export const metadata: Metadata = {
     description: "Leading manufacturer of mineral water bottling and liquid filling machinery in India.",
     images: [`${baseUrl}/assets/images/shiv_shakti_logo.png`],
   },
+  verification: {
+    google: "gVfe6jh6UftZf1zoorBjefPqRhpLr1nHrbiwerW6Nz0",
+  },
 };
 
 const jsonLdOrganization = {

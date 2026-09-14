@@ -81,18 +81,6 @@ export default async function ProductPage(props: {
     relatedProducts.push(...extraProducts);
   }
 
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": product.title,
-    "image": `https://www.shivshaktiwaterequipment.com/assets/images/${product.image}`,
-    "description": product.seoDesc,
-    "category": product.category,
-    "brand": {
-      "@type": "Brand",
-      "name": "SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
-    }
-  };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -127,10 +115,6 @@ export default async function ProductPage(props: {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

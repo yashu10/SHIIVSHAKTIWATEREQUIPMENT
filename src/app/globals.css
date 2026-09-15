@@ -2613,7 +2613,7 @@ ul {
 .footer-bottom {
     background-color: #06111C;
     /* Darker navy for the very bottom line */
-    padding: 20px 0;
+    padding: 20px 30px;
     font-size: 0.9rem;
     color: #64748B;
     margin-top: 0;
@@ -2626,6 +2626,7 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+    padding: 0 20px;
 }
 
 .footer-bottom-content p {
@@ -2645,11 +2646,15 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .footer-bottom {
+        padding: 15px 16px;
+    }
     .footer-bottom-content {
         justify-content: center;
         text-align: center;
         flex-direction: column;
         gap: 6px;
+        padding: 0;
     }
 }
 

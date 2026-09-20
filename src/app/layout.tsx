@@ -129,8 +129,11 @@ const jsonLdOrganization = {
         "areaServed": "Global",
         "availableLanguage": ["en", "hi", "gu"]
       },
+      "areaServed": ["India", "Africa", "Middle East", "Southeast Asia", "South America"],
       "sameAs": [
-        "https://wa.me/919712666160"
+        "https://wa.me/919712666160",
+        "https://www.indiamart.com/shiivshaktiwaterequipment/",
+        "https://www.instagram.com/shivshaktiwatersolution"
       ]
     },
     {

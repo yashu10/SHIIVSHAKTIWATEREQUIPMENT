@@ -28,7 +28,7 @@ export default function Export() {
       {/* Hero */}
       <section className="page-header pattern-bg active">
         <div className="container">
-          <h1 className="page-title fade-up" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}>
+          <h1 className="page-title fade-up" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", lineHeight: 1.25 }}>
             Your Trusted Manufacturing Partner for Water &amp; Beverage Bottling Machinery — <span className="text-gradient">Exported to 25+ Countries</span>
           </h1>
           <p className="page-subtitle fade-up delay-1" style={{ maxWidth: "900px" }}>
@@ -36,7 +36,14 @@ export default function Export() {
             ISO 9001:2015 &amp; CE certified machinery to distributors, trading houses, and manufacturers across
             Africa, the Middle East, Southeast Asia, and South America.
           </p>
-          <div className="fade-up delay-2" style={{ marginTop: "30px" }}>
+          <div className="export-hero-badges fade-up delay-2">
+            {certifications.map((c) => (
+              <span key={c} className="export-chip">
+                <i className="fa-solid fa-circle-check"></i> {c}
+              </span>
+            ))}
+          </div>
+          <div className="export-hero-cta fade-up delay-2">
             <ExportQuoteButton label="Get an Export Quote" />
           </div>
         </div>
@@ -49,7 +56,7 @@ export default function Export() {
             <h2>
               <i className="fa-solid fa-star"></i> Why International Buyers Choose Shiv Shakti
             </h2>
-            <div className="values-grid">
+            <div className="values-grid export-reasons">
               {reasons.map((r, idx) => (
                 <div key={idx} className="value-card">
                   <i className={`fa-solid ${r.icon}`}></i>
@@ -63,47 +70,47 @@ export default function Export() {
             <h2>
               <i className="fa-solid fa-route"></i> Our Export Process
             </h2>
-            <div className="values-grid">
+            <ol className="export-steps">
               {steps.map((s, idx) => (
-                <div key={idx} className="value-card">
-                  <i style={{ fontStyle: "normal", fontWeight: 800 }}>{idx + 1}</i>
-                  <span style={{ fontSize: "1rem" }}>{s}</span>
-                </div>
+                <li key={idx} className="export-step">
+                  <span className="export-step-num">{idx + 1}</span>
+                  <span>{s}</span>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
 
-          <div className="mission-vision-wrapper">
-            <div className="mv-card animate-on-scroll">
+          <div className="export-info-cards">
+            <div className="export-info-card animate-on-scroll">
               <h2>
                 <i className="fa-solid fa-earth-africa"></i> Markets We Serve
               </h2>
-              <ul style={{ paddingLeft: "20px", lineHeight: 1.9 }}>
+              <div className="export-chips">
                 {markets.map((m) => (
-                  <li key={m}>{m}</li>
+                  <span key={m} className="export-chip">
+                    <i className="fa-solid fa-location-dot"></i> {m}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div className="mv-card animate-on-scroll delay-1">
+            <div className="export-info-card animate-on-scroll delay-1">
               <h2>
                 <i className="fa-solid fa-certificate"></i> Certifications
               </h2>
-              <ul style={{ paddingLeft: "20px", lineHeight: 1.9 }}>
+              <div className="export-chips">
                 {certifications.map((c) => (
-                  <li key={c}>{c}</li>
+                  <span key={c} className="export-chip">
+                    <i className="fa-solid fa-circle-check"></i> {c}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
 
-          <div className="about-content-section animate-on-scroll" style={{ textAlign: "center" }}>
+          <div className="export-cta-band animate-on-scroll">
             <h2>Looking for a distributor or manufacturing partner in your country?</h2>
-            <p>
-              Share your requirement and our export team will respond within 24 hours.
-            </p>
-            <div style={{ marginTop: "20px" }}>
-              <ExportQuoteButton label="Request A Quote" />
-            </div>
+            <p>Share your requirement and our export team will respond within 24 hours.</p>
+            <ExportQuoteButton label="Request A Quote" />
           </div>
 
         </div>

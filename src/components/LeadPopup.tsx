@@ -11,7 +11,8 @@ export const LeadPopup: React.FC = () => {
     email: "",
     requirement: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [feedback, setFeedback] = useState("");
 
   if (!isLeadPopupOpen) return null;
 
@@ -23,26 +24,49 @@ export const LeadPopup: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    
+    setStatus("sending");
+    setFeedback("");
+
     // If it was a brochure request, open the brochure immediately to prevent popup blockers
     if (leadPopupType === "brochure") {
       window.open(encodeURI("/assets/images/Shiv Shakti Broucher.pdf"), "_blank");
     }
 
-    const message = `Hello, I am interested in ${leadPopupType === "quote" ? "a Quote" : "downloading the Brochure"}.\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nEmail: ${formData.email}\nRequirement: ${formData.requirement}`;
-    const whatsappUrl = `https://wa.me/919712666160?text=${encodeURIComponent(message)}`;
-    
-    // Reset form after a brief period and close popup
-    setTimeout(() => {
-      setIsSubmitted(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.mobile,
+          email: formData.email,
+          subject: leadPopupType === "quote" ? "Quote Request" : "Brochure Download",
+          message: `Requirement: ${formData.requirement}`,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setFeedback("Message sent! We'll get back to you soon.");
       setFormData({ name: "", mobile: "", email: "", requirement: "" });
-      closeLeadPopup();
-      
-      window.open(whatsappUrl, "_blank");
-    }, 1000);
+      setTimeout(() => {
+        setStatus("idle");
+        setFeedback("");
+        closeLeadPopup();
+      }, 2500);
+    } catch (err) {
+      setStatus("error");
+      setFeedback(
+        (err instanceof Error && err.message ? err.message : "Could not send your request.") +
+          " Please try again or call us on +91 97126 66160."
+      );
+    }
   };
 
   const isQuote = leadPopupType === "quote";
@@ -72,10 +96,10 @@ export const LeadPopup: React.FC = () => {
               )}
             </h2>
             
-            {isSubmitted ? (
-              <div style={{ textAlign: "center", padding: "40px 0" }}>
+            {status === "success" ? (
+              <div role="status" style={{ textAlign: "center", padding: "40px 0" }}>
                 <i className="fa-solid fa-circle-check" style={{ fontSize: "3rem", color: "green", marginBottom: "15px" }}></i>
-                <h3>Processing your request...</h3>
+                <h3>{feedback}</h3>
               </div>
             ) : (
               <form className="lead-form" onSubmit={handleSubmit}>
@@ -136,8 +160,13 @@ export const LeadPopup: React.FC = () => {
                   <option value="Inkjet Batch Coding">Inkjet Batch Coding</option>
                   <option value="Other">Other Requirement</option>
                 </select>
-                <button type="submit" className="btn btn-orange">
-                  {isQuote ? "REQUEST QUOTE" : "DOWNLOAD BROCHURE"}
+                {status === "error" && (
+                  <p role="alert" style={{ color: "#a12626", fontWeight: 600, marginBottom: "12px" }}>
+                    {feedback}
+                  </p>
+                )}
+                <button type="submit" className="btn btn-orange" disabled={status === "sending"} style={{ opacity: status === "sending" ? 0.7 : 1 }}>
+                  {status === "sending" ? "SENDING..." : isQuote ? "REQUEST QUOTE" : "DOWNLOAD BROCHURE"}
                 </button>
               </form>
             )}

@@ -11,7 +11,8 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [feedback, setFeedback] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,18 +22,33 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    
-    const message = `Hello, I have an inquiry.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/919712666160?text=${encodeURIComponent(message)}`;
+    setStatus("sending");
+    setFeedback("");
 
-    setTimeout(() => {
-      setIsSubmitted(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setFeedback("Message sent! We'll get back to you soon.");
       setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
-      window.open(whatsappUrl, "_blank");
-    }, 1200);
+    } catch (err) {
+      setStatus("error");
+      setFeedback(
+        (err instanceof Error && err.message ? err.message : "Could not send your message.") +
+          " Please try again or call us on +91 97126 66160."
+      );
+    }
   };
 
   return (
@@ -96,12 +112,24 @@ export default function Contact() {
               Whether you have a question about our products, services, or pricing, you can ask us. Our team is ready to support you!
             </p>
 
-            {isSubmitted ? (
-              <div style={{ textAlign: "center", padding: "40px 0" }}>
-                <i className="fa-solid fa-circle-check" style={{ fontSize: "3rem", color: "green", marginBottom: "15px" }}></i>
-                <h3>Sending Message...</h3>
+            {feedback && (
+              <div
+                role={status === "error" ? "alert" : "status"}
+                style={{
+                  padding: "14px 18px",
+                  borderRadius: "8px",
+                  marginBottom: "20px",
+                  fontWeight: 600,
+                  background: status === "success" ? "#e6f6ec" : "#fdecec",
+                  color: status === "success" ? "#1e6b3a" : "#a12626",
+                  border: `1px solid ${status === "success" ? "#b7e4c7" : "#f5c2c2"}`,
+                }}
+              >
+                <i className={`fa-solid ${status === "success" ? "fa-circle-check" : "fa-circle-exclamation"}`} style={{ marginRight: "8px" }}></i>
+                {feedback}
               </div>
-            ) : (
+            )}
+
               <form className="custom-contact-form" onSubmit={handleSubmit}>
                 <div className="form-row">
                   <div className="form-group">
@@ -167,11 +195,10 @@ export default function Contact() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-orange-form" style={{ border: "none", cursor: "pointer" }}>
-                  Submit Message <i className="fa-regular fa-paper-plane" style={{ marginLeft: "5px" }}></i>
+                <button type="submit" className="btn btn-orange-form" disabled={status === "sending"} style={{ border: "none", cursor: status === "sending" ? "wait" : "pointer", opacity: status === "sending" ? 0.7 : 1 }}>
+                  {status === "sending" ? "Sending..." : "Submit Message"} <i className="fa-regular fa-paper-plane" style={{ marginLeft: "5px" }}></i>
                 </button>
               </form>
-            )}
           </div>
 
           {/* Google Map */}

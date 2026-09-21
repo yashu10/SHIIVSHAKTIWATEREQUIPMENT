@@ -99,7 +99,7 @@ export default function Contact() {
               </p>
               <p style={{ marginTop: "10px" }}>
                 <i className="fa-solid fa-envelope" style={{ fontSize: "0.9rem", marginRight: "5px", color: "var(--primary)" }}></i>
-                shivshakti2932@yahoo.com
+                contact@shivshaktiwaterequipment.com
               </p>
             </div>
           </div>

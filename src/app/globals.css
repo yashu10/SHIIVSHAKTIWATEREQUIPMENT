@@ -2088,7 +2088,7 @@ ul {
 /* ================== Contact Us Page ================== */
 .contact-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 30px;
     margin-bottom: 50px;
 }
@@ -4113,4 +4113,22 @@ ul {
   background-color: #fff;
   border-color: #fff;
   color: var(--primary-dark);
+}
+
+/* Contact page: keep long emails/addresses inside the cards on phones */
+.contact-info-card p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 576px) {
+  .contact-info-card {
+    padding: 24px 16px;
+  }
+  .contact-info-card p {
+    font-size: 0.95rem;
+  }
+  .contact-form-section {
+    padding: 30px 18px;
+  }
 }

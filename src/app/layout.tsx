@@ -7,6 +7,7 @@ import { Footer } from "../components/Footer";
 import { LeadPopup } from "../components/LeadPopup";
 import { VideoModal } from "../components/VideoModal";
 import { ScrollObserver } from "../components/ScrollObserver";
+import ChatLauncher from "../components/ChatLauncher";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -179,6 +180,7 @@ export default function RootLayout({
           <LeadPopup />
           <VideoModal />
           <ScrollObserver />
+          <ChatLauncher />
         </UIProvider>
       </body>
     </html>

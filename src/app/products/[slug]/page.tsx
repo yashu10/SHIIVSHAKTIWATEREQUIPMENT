@@ -31,7 +31,7 @@ export async function generateMetadata(props: {
   const imageUrl = `https://www.shivshaktiwaterequipment.com/assets/images/${product.image}`;
 
   return {
-    title: `${product.seoTitle} | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
+    title: product.seoTitle,
     description: product.seoDesc,
     alternates: {
       canonical: `https://www.shivshaktiwaterequipment.com/products/${resolvedParams.slug}`,

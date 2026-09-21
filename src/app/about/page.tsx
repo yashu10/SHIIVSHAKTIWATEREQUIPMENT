@@ -3,7 +3,7 @@ import Link from "next/link";
 import CertificatesGallery from "../../components/CertificatesGallery";
 
 export const metadata = {
-  title: "About Us | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
+  title: "About Us",
   description: "Established in 1998, SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. is one of Gujarat's leading manufacturers of mineral water bottling equipment with 25+ years combined experience.",
 };
 

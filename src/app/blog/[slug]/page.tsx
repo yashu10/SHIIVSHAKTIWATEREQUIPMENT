@@ -29,7 +29,7 @@ export async function generateMetadata(props: {
   const imageUrl = `https://www.shivshaktiwaterequipment.com${blog.image}`;
 
   return {
-    title: `${blog.title} | Blog | SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.`,
+    title: `${blog.title} | Blog`,
     description: blog.summary,
     alternates: {
       canonical: `https://www.shivshaktiwaterequipment.com/blog/${resolvedParams.slug}`,

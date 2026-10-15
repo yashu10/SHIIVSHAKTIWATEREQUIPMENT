@@ -1,0 +1,36 @@
+name: Deploy Next.js to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ${{ secrets.APP_PATH }}
+
+            echo "Pulling latest code..."
+            git fetch origin
+            git reset --hard origin/main
+
+            echo "Installing dependencies..."
+            npm install
+
+            echo "Building application..."
+            npm run build
+
+            echo "Restarting application..."
+            pm2 restart shivshakti || pm2 start npm --name shivshakti -- start
+
+            pm2 save

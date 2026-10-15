@@ -1,0 +1,26 @@
+# Allow access to hidden directories like _next
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Explicitly allow access to the _next folder
+  RewriteRule ^_next/ - [L]
+
+  # If the requested file or directory exists, serve it
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # If it doesn't exist, try to serve the corresponding folder's index.html (Next.js export behavior)
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+</IfModule>
+
+# Ensure proper MIME types for Next.js static assets
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes

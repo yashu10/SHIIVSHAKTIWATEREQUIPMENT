@@ -1,4 +1,3 @@
-import React from "react";
 import productsData from "../../data/products.json";
 import { ProductsListClient } from "../../components/ProductsListClient";
 import { Metadata } from "next";

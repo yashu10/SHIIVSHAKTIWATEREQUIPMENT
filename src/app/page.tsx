@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import productsData from "../data/products.json";
 import blogsData from "../data/blogs.json";
@@ -419,7 +418,7 @@ export default function Home() {
           <HomeFaqAccordion />
 
           <div className="faq-cta animate-on-scroll">
-            <p>Still have questions? We're here to help!</p>
+            <p>Still have questions? We&apos;re here to help!</p>
             <Link href="/contact" className="btn btn-primary">
               Contact Our Experts
             </Link>

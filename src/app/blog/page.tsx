@@ -1,4 +1,3 @@
-import React from "react";
 import blogsData from "../../data/blogs.json";
 import { BlogListClient } from "../../components/BlogListClient";
 import { Metadata } from "next";

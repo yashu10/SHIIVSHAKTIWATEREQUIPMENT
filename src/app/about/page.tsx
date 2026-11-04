@@ -1,5 +1,3 @@
-import React from "react";
-import Link from "next/link";
 import CertificatesGallery from "../../components/CertificatesGallery";
 
 export const metadata = {

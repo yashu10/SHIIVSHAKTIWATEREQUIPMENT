@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
+import { useState } from "react";
 
 export function HomeFaqAccordion() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);

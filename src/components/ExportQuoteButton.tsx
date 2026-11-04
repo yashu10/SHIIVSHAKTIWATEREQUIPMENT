@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useUI } from "../context/UIContext";
 
 export default function ExportQuoteButton({ label }: { label: string }) {

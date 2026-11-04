@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useUI } from "../context/UIContext";
 
@@ -28,13 +28,9 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
   relatedProducts,
 }) => {
   const { openLeadPopup } = useUI();
-  const [activeImage, setActiveImage] = useState("");
-
-  useEffect(() => {
-    if (product) {
-      setActiveImage(`/assets/images/${product.image}`);
-    }
-  }, [product]);
+  const [activeImage, setActiveImage] = useState(
+    `/assets/images/${product.image}`
+  );
 
   const thumbImages = [
     `/assets/images/${product.image}`,

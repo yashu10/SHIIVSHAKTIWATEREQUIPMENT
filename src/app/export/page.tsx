@@ -1,4 +1,3 @@
-import React from "react";
 import ExportQuoteButton from "../../components/ExportQuoteButton";
 
 export default function Export() {

@@ -1,10 +1,10 @@
 {
-  "name": "temp-next-app",
+  "name": "shiiv-shakti-water-equipment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node fix-export.js",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },

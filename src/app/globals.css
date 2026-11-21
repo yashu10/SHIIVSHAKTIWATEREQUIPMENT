@@ -4138,3 +4138,137 @@ ul {
     padding: 30px 18px;
   }
 }
+
+
+/* ---- No text caret "|" / selection flash when clicking UI (inputs keep theirs) ---- */
+body {
+    caret-color: transparent;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"] {
+    caret-color: auto;
+}
+
+a,
+button,
+.btn,
+nav,
+.header-branding,
+.hero,
+.slider-controls,
+.product-card,
+.why-card,
+.video-card,
+.faq-question,
+summary,
+img {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+
+/* ================== Founder Section ================== */
+.founder-section {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 10px 40px rgba(15, 76, 129, 0.1);
+}
+
+.founder-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.founder-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent, #e85d04);
+    margin-bottom: 8px;
+}
+
+.founder-info h2 {
+    font-size: 2rem;
+    margin: 0 0 4px;
+    color: var(--primary-dark, #0f4c81);
+}
+
+.founder-info h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #555;
+    margin: 0 0 16px;
+}
+
+.founder-info p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.founder-points {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 20px;
+}
+
+.founder-points li {
+    margin-bottom: 8px;
+}
+
+.founder-points i {
+    color: #2e9e5b;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .founder-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .founder-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+
+.founder-reverse {
+    grid-template-columns: 1fr 320px;
+}
+
+.founder-reverse .founder-photo {
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    .founder-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-reverse .founder-photo {
+        order: 0;
+    }
+}

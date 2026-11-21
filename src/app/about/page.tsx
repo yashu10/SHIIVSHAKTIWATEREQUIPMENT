@@ -113,6 +113,69 @@ export default function About() {
             </p>
           </div>
 
+          {/* Founder */}
+          <div className="founder-section animate-on-scroll">
+            <div className="founder-photo">
+              <img
+                src="/assets/images/pradip_patel.webp"
+                alt="Mr. Pradip Patel, Founder of SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                width={640}
+                height={800}
+                loading="lazy"
+              />
+            </div>
+            <div className="founder-info">
+              <span className="founder-tag">Meet Our Founder</span>
+              <h2>Mr. Pradip Patel</h2>
+              <h3>Founder &amp; Managing Director</h3>
+              <p>
+                Mr. Pradip Patel founded SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. in 1998 in Ahmedabad with a simple
+                goal: to give entrepreneurs dependable, affordable bottling machinery built to international standards.
+                Under his leadership the company has grown into a trusted manufacturer and exporter of water filling
+                machines, R.O. plants, PET blow moulding and complete turnkey bottling lines.
+              </p>
+              <p>
+                Guided by his hands-on approach to engineering and a customer-first mindset, the company has delivered
+                1000+ projects across 15+ countries. He continues to personally lead the team on quality, innovation
+                and after-sales support, so every client gets a plant that runs reliably from day one.
+              </p>
+              <ul className="founder-points">
+                <li><i className="fa-solid fa-circle-check"></i> Established in 1998, 25+ years of industry experience</li>
+                <li><i className="fa-solid fa-circle-check"></i> ISO 9001:2015 certified manufacturing</li>
+                <li><i className="fa-solid fa-circle-check"></i> Turnkey projects delivered across 15+ countries</li>
+              </ul>
+              <a href="/contact/" className="btn btn-primary">Talk to Our Team</a>
+            </div>
+          </div>
+
+          {/* Co-Founder */}
+          <div className="founder-section founder-reverse animate-on-scroll">
+            <div className="founder-photo">
+              <img
+                src="/assets/images/sonal_patel.webp"
+                alt="Mrs. Sonal Patel, Co-Founder of SHIIV SHAKTI WATER EQUIPMENT PVT. LTD."
+                width={640}
+                height={800}
+                loading="lazy"
+              />
+            </div>
+            <div className="founder-info">
+              <span className="founder-tag">Meet Our Co-Founder</span>
+              <h2>Mrs. Sonal Patel</h2>
+              <h3>Co-Founder</h3>
+              <p>
+                Mrs. Sonal Patel is the Co-Founder of SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. and an integral part of the
+                leadership team that has built the company since 1998. Together with Mr. Pradip Patel, she has helped
+                shape its growth into a trusted manufacturer and exporter of bottling machinery.
+              </p>
+              <p>
+                She is the point of contact for many of our customers and works closely with clients and the team to
+                ensure enquiries, orders and after-sales support are handled promptly and with care.
+              </p>
+              <a href="/contact/" className="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+
           <div className="mission-vision-wrapper">
             <div className="mv-card animate-on-scroll">
               <h2>

@@ -15,7 +15,39 @@ function escapeHtml(value: string) {
     .replace(/"/g, "&quot;");
 }
 
+// Basic abuse protection: same-origin check + per-IP rate limit (in-memory, per instance)
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_PER_WINDOW = 5;
+const hits = new Map<string, number[]>();
+
+function rateLimited(ip: string) {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter((t) => now - t < WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  if (hits.size > 5000) {
+    for (const [k, v] of hits) if (!v.some((t) => now - t < WINDOW_MS)) hits.delete(k);
+  }
+  return recent.length > MAX_PER_WINDOW;
+}
+
 export async function POST(request: Request) {
+  const origin = request.headers.get("origin");
+  const host = request.headers.get("host");
+  if (origin && host) {
+    try {
+      if (new URL(origin).host !== host) {
+        return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+      }
+    } catch {
+      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    }
+  }
+  const ip = (request.headers.get("x-forwarded-for") || "unknown").split(",")[0].trim();
+  if (rateLimited(ip)) {
+    return NextResponse.json({ error: "Too many requests. Please try again later." }, { status: 429 });
+  }
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();

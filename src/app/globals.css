@@ -4414,3 +4414,29 @@ body {
         font-size: 0.74rem;
     }
 }
+
+/* Mobile: category/filter chips become one swipeable row instead of 5 wrapped lines */
+@media (max-width: 768px) {
+    .filter-buttons-wrapper {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 4px 20px 10px;
+        margin-bottom: 24px !important;
+    }
+
+    .filter-buttons-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-buttons-wrapper .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        padding: 8px 16px !important;
+        font-size: 0.9rem !important;
+    }
+}

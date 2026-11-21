@@ -10,6 +10,7 @@ export const LeadPopup: React.FC = () => {
     mobile: "",
     email: "",
     requirement: "",
+    website: "", // honeypot
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [feedback, setFeedback] = useState("");
@@ -44,6 +45,7 @@ export const LeadPopup: React.FC = () => {
           email: formData.email,
           subject: leadPopupType === "quote" ? "Quote Request" : "Brochure Download",
           message: `Requirement: ${formData.requirement}`,
+          website: formData.website,
         }),
       });
       const data = await res.json().catch(() => ({}));
@@ -54,7 +56,7 @@ export const LeadPopup: React.FC = () => {
 
       setStatus("success");
       setFeedback("Message sent! We'll get back to you soon.");
-      setFormData({ name: "", mobile: "", email: "", requirement: "" });
+      setFormData({ name: "", mobile: "", email: "", requirement: "", website: "" });
       setTimeout(() => {
         setStatus("idle");
         setFeedback("");
@@ -126,6 +128,16 @@ export const LeadPopup: React.FC = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                />
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
                 />
                 <select
                   name="requirement"

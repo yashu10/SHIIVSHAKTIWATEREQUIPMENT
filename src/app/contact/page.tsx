@@ -9,6 +9,7 @@ export default function Contact() {
     email: "",
     subject: "",
     message: "",
+    website: "", // honeypot
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [feedback, setFeedback] = useState("");
@@ -40,7 +41,7 @@ export default function Contact() {
 
       setStatus("success");
       setFeedback("Message sent! We'll get back to you soon.");
-      setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", phone: "", email: "", subject: "", message: "", website: "" });
     } catch (err) {
       setStatus("error");
       setFeedback(
@@ -170,7 +171,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="subjectInput">Subject</label>
+                    <label htmlFor="subjectInput">Subject (optional)</label>
                     <input
                       id="subjectInput"
                       type="text"
@@ -178,10 +179,19 @@ export default function Contact() {
                       placeholder="Subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      required
                     />
                   </div>
                 </div>
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleInputChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+                />
                 <div className="form-group">
                   <label htmlFor="messageInput">Message</label>
                   <textarea

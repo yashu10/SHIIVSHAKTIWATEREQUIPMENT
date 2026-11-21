@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
         <div className="container branding-container">
           <Link href="/" className="logo" onClick={closeMobileMenu}>
             <img
-              src="/assets/images/shiv_shakti_logo.png"
+              src="/assets/images/shiv_shakti_logo.webp"
               alt="SHIIV SHAKTI WATER EQUIPMENT PVT. LTD. Logo"
               className="header-logo"
             />

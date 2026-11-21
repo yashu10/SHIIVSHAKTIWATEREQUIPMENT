@@ -97,7 +97,7 @@ export default function Home() {
       <section className="about section-padding" id="about">
         <div className="container about-container">
           <div className="about-image animate-on-scroll">
-            <img src="/assets/images/prod_water_filling.png" alt="Water Filling Equipment" loading="lazy" />
+            <img src="/assets/images/prod_water_filling.webp" alt="Water Filling Equipment" loading="lazy" />
             <div className="floating-badge">
               <span className="year">25+</span>
               <span className="text">
@@ -319,7 +319,7 @@ export default function Home() {
                   <div key={logoNumber} className="client-logo-item">
                     <div className="client-logo-inner">
                       <img
-                        src={`/assets/images/clients/${logoNumber}.jpg`}
+                        src={`/assets/images/clients/${logoNumber}.webp`}
                         alt={`Shiv Shakti Client Logo ${logoNumber}`}
                         loading="lazy"
                       />
@@ -336,7 +336,7 @@ export default function Home() {
       <section
         className="global-reach section-padding"
         id="global-reach"
-        style={{ backgroundImage: "url('/assets/images/bg_factory.png')" }}
+        style={{ backgroundImage: "url('/assets/images/bg_factory.webp')" }}
       >
         <div className="glass-overlay new-glass-overlay"></div>
         <div className="container relative z-index-1">
@@ -394,7 +394,7 @@ export default function Home() {
 
             <div className="reach-map-content animate-on-scroll delay-1">
               <div className="map-floating-wrapper">
-                <img src="/assets/images/bg_world_map.png" alt="Global Network Map" className="world-map-animated" loading="lazy" />
+                <img src="/assets/images/bg_world_map.webp" alt="Global Network Map" className="world-map-animated" loading="lazy" />
                 <div className="pulse-dot" style={{ top: "35%", left: "22%" }}></div>
                 <div className="pulse-dot" style={{ top: "45%", left: "48%" }}></div>
                 <div className="pulse-dot" style={{ top: "55%", left: "75%" }}></div>

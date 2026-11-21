@@ -4,25 +4,26 @@ import { useState, useEffect } from "react";
 
 export function HomeHeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState<number[]>([0]);
   
   const slides = [
     {
-      img: "/assets/images/hero_machine_1.png",
+      img: "/assets/images/hero_machine_1.webp",
       title: "Precision Engineering for the Beverage Industry",
       desc: "State-of-the-art washing, filling, and capping solutions tailored for high-volume production.",
     },
     {
-      img: "/assets/images/hero_machine_2.png",
+      img: "/assets/images/hero_machine_2.webp",
       title: "Advanced Rinsing Systems",
       desc: "Ensuring maximum hygiene and efficiency for global standards.",
     },
     {
-      img: "/assets/images/hero_machine_3.png",
+      img: "/assets/images/hero_machine_3.webp",
       title: "High-Speed Filling Technology",
       desc: "Robust, stainless steel construction designed for minimal downtime.",
     },
     {
-      img: "/assets/images/hero_machine_4.png",
+      img: "/assets/images/hero_machine_4.webp",
       title: "Automated Capping Units",
       desc: "Securing your product with precision torque and reliable sealing.",
     },
@@ -34,6 +35,15 @@ export function HomeHeroSlider() {
     }, 7000);
     return () => clearInterval(timer);
   }, [slides.length]);
+
+  // Only fetch a slide's image once it is current or next up
+  useEffect(() => {
+    const next = (currentSlide + 1) % slides.length;
+    setLoaded((prev) => {
+      const add = [currentSlide, next].filter((i) => !prev.includes(i));
+      return add.length ? [...prev, ...add] : prev;
+    });
+  }, [currentSlide, slides.length]);
 
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -50,8 +60,19 @@ export function HomeHeroSlider() {
           <div
             key={idx}
             className={`slide ${idx === currentSlide ? "active" : ""}`}
-            style={{ backgroundImage: `url('${slide.img}')` }}
           >
+            {loaded.includes(idx) && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                className="slide-img"
+                src={slide.img}
+                alt=""
+                width={1600}
+                height={1600}
+                decoding="async"
+                fetchPriority={idx === 0 ? "high" : "auto"}
+              />
+            )}
             <div className="slide-overlay"></div>
             <div className="container slide-content">
               {idx === 0 ? (

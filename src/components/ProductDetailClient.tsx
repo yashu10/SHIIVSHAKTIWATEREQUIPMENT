@@ -34,9 +34,9 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
 
   const thumbImages = [
     `/assets/images/${product.image}`,
-    "/assets/images/hero_machine_1.png",
-    "/assets/images/hero_machine_2.png",
-    "/assets/images/hero_machine_3.png",
+    "/assets/images/hero_machine_1.webp",
+    "/assets/images/hero_machine_2.webp",
+    "/assets/images/hero_machine_3.webp",
   ];
 
   return (
@@ -65,7 +65,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
                   alt={product.title}
                   id="mainImage"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+                    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
                   }}
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
@@ -79,7 +79,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
                     alt={`Thumbnail ${idx + 1}`}
                     onClick={() => setActiveImage(img)}
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+                      (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
                     }}
                     style={{ cursor: "pointer" }}
                   />
@@ -239,7 +239,7 @@ export const ProductDetailClient: React.FC<ProductDetailClientProps> = ({
                         src={rpImgPath}
                         alt={rp.title}
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+                          (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
                         }}
                       />
                     </div>

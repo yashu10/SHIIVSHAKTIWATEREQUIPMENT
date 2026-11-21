@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
           {/* Column 1 */}
           <div className="footer-about">
             <img
-              src="/assets/images/shiv_shakti_logo.png"
+              src="/assets/images/shiv_shakti_logo.webp"
               alt="Shiv Shakti Enterprise"
               className="footer-logo"
               style={{ maxHeight: "60px", width: "auto" }}

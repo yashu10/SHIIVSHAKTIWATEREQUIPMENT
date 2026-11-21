@@ -174,7 +174,7 @@ export const LeadPopup: React.FC = () => {
           <div
             className="popup-image-side"
             style={{
-              backgroundImage: "url('/assets/images/hero_machine_1.png')",
+              backgroundImage: "url('/assets/images/hero_machine_1.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

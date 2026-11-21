@@ -72,7 +72,7 @@ export const BlogDetailClient: React.FC<BlogDetailClientProps> = ({
   };
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
   };
 
   return (
@@ -226,7 +226,7 @@ export const BlogDetailClient: React.FC<BlogDetailClientProps> = ({
             {/* Author / Company Brand Box */}
             <div className="blog-author-box">
               <img
-                src="/assets/images/shiv_shakti_logo.png"
+                src="/assets/images/shiv_shakti_logo.webp"
                 alt="Shiv Shakti Water Equipment Logo"
                 className="blog-author-avatar"
                 onError={handleImageError}

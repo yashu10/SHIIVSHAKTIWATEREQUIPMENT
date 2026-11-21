@@ -105,7 +105,7 @@ export function BlogListClient({ blogs, categories }: BlogListClientProps) {
                   alt={blog.title}
                   loading="lazy"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+                    (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
                   }}
                 />
                 <div className="blog-date">{blog.date}</div>

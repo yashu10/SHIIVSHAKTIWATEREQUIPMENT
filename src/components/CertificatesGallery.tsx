@@ -4,22 +4,22 @@ import { useState } from "react";
 
 const certificates = [
   {
-    src: "/assets/images/certificates/cor.jpg",
+    src: "/assets/images/certificates/cor.webp",
     alt: "Certificate of Registration - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     title: "Certificate of Registration",
   },
   {
-    src: "/assets/images/certificates/coc.jpg",
+    src: "/assets/images/certificates/coc.webp",
     alt: "Certificate of Compliance - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     title: "Certificate of Compliance",
   },
   {
-    src: "/assets/images/certificates/cedraft.jpg",
+    src: "/assets/images/certificates/cedraft.webp",
     alt: "CE Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     title: "CE Certificate",
   },
   {
-    src: "/assets/images/certificates/qmsdraft.jpg",
+    src: "/assets/images/certificates/qmsdraft.webp",
     alt: "ISO 9001 QMS Certificate - SHIIV SHAKTI WATER EQUIPMENT PVT. LTD.",
     title: "ISO 9001 QMS Certificate",
   },

@@ -74,7 +74,7 @@ export function ProductsListClient({ products, categories }: ProductsListClientP
                     alt={p.title}
                     loading="lazy"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.png";
+                      (e.target as HTMLImageElement).src = "/assets/images/prod_water_filling.webp";
                     }}
                   />
                 </div>

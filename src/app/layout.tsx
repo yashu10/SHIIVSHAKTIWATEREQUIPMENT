@@ -165,7 +165,25 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://i.ytimg.com" />
+        <link rel="preload" as="image" href="/assets/images/hero_machine_1.webp" fetchPriority="high" />
+        {/* Non-render-blocking Font Awesome */}
+        <link
+          id="fa-css"
+          suppressHydrationWarning
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          media="print"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var l=document.getElementById('fa-css');if(!l)return;function f(){l.media='all'}if(l.sheet){f()}else{l.addEventListener('load',f);setTimeout(f,3000)}})();`,
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}

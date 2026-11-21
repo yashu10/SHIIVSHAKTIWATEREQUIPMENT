@@ -1,21 +1,16 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 /**
- * Contact form -> email.
+ * Contact form -> Web3Forms (https://web3forms.com).
  *
- * Environment variables (see .env.example):
- *   SMTP_PASS        (required) mailbox password
- *   SMTP_USER        default: contact@shivshaktiwaterequipment.com
- *   SMTP_HOST        default: smtp.hostinger.com
- *   SMTP_PORT        default: 465  (465 => SSL/TLS, 587 => STARTTLS)
- *   CONTACT_TO_EMAIL default: SMTP_USER  (where enquiries are delivered)
- *   SMTP_FROM        default: SMTP_USER  (Hostinger only accepts the authenticated mailbox)
+ * Environment variable (see .env.example):
+ *   WEB3FORMS_KEY  (required) your Web3Forms access key. Server-side only, never sent to the browser.
  */
 
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 const MAX_LEN = { name: 100, phone: 30, email: 150, subject: 200, message: 5000 };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_RE = /^[0-9+()\-.\s]{7,30}$/;
@@ -34,14 +29,6 @@ function rateLimited(ip: string) {
     for (const [k, v] of hits) if (!v.some((t) => now - t < WINDOW_MS)) hits.delete(k);
   }
   return recent.length > MAX_PER_WINDOW;
-}
-
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 }
 
 function fail(message: string, status: number) {
@@ -103,84 +90,51 @@ export async function POST(request: Request) {
     }
   }
 
-  // --- SMTP configuration ----------------------------------------------------
-  const SMTP_USER = process.env.SMTP_USER || "contact@shivshaktiwaterequipment.com";
-  const SMTP_PASS = process.env.SMTP_PASS;
-  const SMTP_HOST = process.env.SMTP_HOST || "smtp.hostinger.com";
-  const port = Number(process.env.SMTP_PORT || 465);
-
-  if (!SMTP_PASS) {
+  // --- Web3Forms key ---------------------------------------------------------
+  const accessKey = process.env.WEB3FORMS_KEY;
+  if (!accessKey) {
     console.error(
-      "[contact] SMTP_PASS is not set on the server. Add SMTP_PASS (and optionally SMTP_USER, SMTP_HOST, SMTP_PORT, CONTACT_TO_EMAIL) to the app's environment variables and restart the app."
+      "[contact] WEB3FORMS_KEY is not set in the running app. Add WEB3FORMS_KEY in the server environment variables (exact name, no quotes/spaces) and restart the app."
     );
-    return fail("Our email service is temporarily unavailable.", 503);
+    return fail("Our contact service is temporarily unavailable.", 503);
   }
-  if (!Number.isInteger(port) || port <= 0) {
-    console.error(`[contact] SMTP_PORT is invalid: "${process.env.SMTP_PORT}"`);
-    return fail("Our email service is temporarily unavailable.", 503);
-  }
-
-  const to = process.env.CONTACT_TO_EMAIL || SMTP_USER;
-  const from = process.env.SMTP_FROM || SMTP_USER;
-
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port,
-    secure: port === 465, // 465 = implicit SSL/TLS (Hostinger); 587 uses STARTTLS
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-    connectionTimeout: 10_000,
-    greetingTimeout: 10_000,
-    socketTimeout: 15_000,
-  });
-
-  const text = [
-    "New website enquiry",
-    "",
-    `Name: ${name}`,
-    `Phone: ${phone}`,
-    `Email: ${email}`,
-    `Subject: ${subject}`,
-    "",
-    "Message:",
-    message,
-  ].join("\n");
-
-  const html = `
-    <h2>New website enquiry</h2>
-    <table cellpadding="6" style="border-collapse:collapse">
-      <tr><td><b>Name</b></td><td>${escapeHtml(name)}</td></tr>
-      <tr><td><b>Phone</b></td><td>${escapeHtml(phone)}</td></tr>
-      <tr><td><b>Email</b></td><td>${escapeHtml(email)}</td></tr>
-      <tr><td><b>Subject</b></td><td>${escapeHtml(subject)}</td></tr>
-    </table>
-    <p><b>Message:</b></p>
-    <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
-  `;
 
   // --- Send ------------------------------------------------------------------
   try {
-    await transporter.sendMail({
-      from: `"Shiv Shakti Website" <${from}>`,
-      to,
-      replyTo: `"${name.replace(/["\r\n]/g, "")}" <${email}>`,
-      subject: `[Website Enquiry] ${subject} - ${name}`.replace(/[\r\n]+/g, " "),
-      text,
-      html,
+    const res = await fetch(WEB3FORMS_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: accessKey,
+        name,
+        email, // Web3Forms uses this as the Reply-To address
+        phone,
+        subject: `[Website Enquiry] ${subject} - ${name}`.replace(/[\r\n]+/g, " "),
+        message,
+        from_name: "Shiv Shakti Website",
+      }),
+      signal: AbortSignal.timeout(15_000),
     });
+
+    const raw = await res.text();
+    let data: { success?: boolean; message?: string } = {};
+    try {
+      data = JSON.parse(raw);
+    } catch {
+      /* non-JSON response, logged below */
+    }
+
+    if (!res.ok || data.success !== true) {
+      const detail = (data.message || raw || "").replace(accessKey, "***").slice(0, 500);
+      console.error(`[contact] Web3Forms rejected the submission: HTTP ${res.status} - ${detail}`);
+      return fail("We could not send your message right now. Please try again in a few minutes.", 502);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
-    const e = err as { code?: string; responseCode?: number; response?: string; command?: string; message?: string };
-    // Real reason goes to the server log (never to the visitor)
-    console.error(
-      `[contact] Failed to send email via ${SMTP_HOST}:${port} as ${SMTP_USER} ->`,
-      JSON.stringify({ code: e.code, responseCode: e.responseCode, command: e.command, response: e.response, message: e.message })
-    );
-    if (e.code === "EAUTH") {
-      console.error("[contact] SMTP login rejected: check SMTP_USER / SMTP_PASS (mailbox password) in the server environment.");
-    }
-    return fail(
-      "We could not send your message right now. Please try again in a few minutes.",
-      502
-    );
+    const e = err as { name?: string; message?: string };
+    const msg = (e.message || "").replace(accessKey, "***");
+    console.error(`[contact] Could not reach Web3Forms (${e.name || "Error"}): ${msg}`);
+    return fail("We could not send your message right now. Please try again in a few minutes.", 502);
   }
 }

@@ -4,6 +4,13 @@ const nextConfig = {
   trailingSlash: true,
   compress: true,
   poweredByHeader: false,
+  // Export page is hidden (code kept in src/app/_export). Restore by renaming it back to "export".
+  async redirects() {
+    return [
+      { source: "/export", destination: "/", permanent: false },
+      { source: "/export/", destination: "/", permanent: false },
+    ];
+  },
   async headers() {
     return [
       {

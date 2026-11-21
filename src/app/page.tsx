@@ -93,6 +93,28 @@ export default function Home() {
       {/* Hero Slider Section */}
       <HomeHeroSlider />
 
+      {/* Trust Strip */}
+      <section className="trust-strip" aria-label="Company highlights">
+        <div className="container trust-grid">
+          <div className="trust-item">
+            <i className="fa-solid fa-calendar-check"></i>
+            <div><strong>Since 1998</strong><span>25+ years of experience</span></div>
+          </div>
+          <div className="trust-item">
+            <i className="fa-solid fa-diagram-project"></i>
+            <div><strong>1000+ Projects</strong><span>Turnkey bottling lines</span></div>
+          </div>
+          <div className="trust-item">
+            <i className="fa-solid fa-earth-asia"></i>
+            <div><strong>15+ Countries</strong><span>Global export network</span></div>
+          </div>
+          <div className="trust-item">
+            <i className="fa-solid fa-certificate"></i>
+            <div><strong>ISO 9001:2015</strong><span>Certified quality</span></div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="about section-padding" id="about">
         <div className="container about-container">

@@ -4272,3 +4272,145 @@ img {
         order: 0;
     }
 }
+
+
+/* ================== UI polish ================== */
+html,
+body {
+    overflow-x: clip;
+}
+
+/* Make the blue nav bar actually stick while scrolling (its old parent ended with the header) */
+.site-header {
+    display: contents;
+}
+
+.header-branding {
+    padding: 0.6rem 0;
+}
+
+.header-logo {
+    max-height: 100px;
+}
+
+/* Hero fits the first screen together with the header, so the CTA is visible */
+.hero {
+    height: calc(100svh - 215px);
+    min-height: 520px;
+    max-height: 760px;
+}
+
+.slide-content {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.slide-overlay {
+    background: linear-gradient(90deg, rgba(10, 52, 92, 0.9) 0%, rgba(15, 76, 129, 0.55) 55%, rgba(15, 76, 129, 0.25) 100%);
+}
+
+/* Trust strip overlapping the hero bottom */
+.trust-strip {
+    position: relative;
+    z-index: 30;
+    margin-top: -48px;
+    padding: 0 0 10px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 14px 40px rgba(15, 76, 129, 0.18);
+    padding: 22px 10px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 22px;
+    border-right: 1px solid #e8eef5;
+}
+
+.trust-item:last-child {
+    border-right: none;
+}
+
+.trust-item i {
+    font-size: 1.7rem;
+    color: var(--primary, #0f4c81);
+    flex-shrink: 0;
+}
+
+.trust-item strong {
+    display: block;
+    font-family: var(--font-heading, inherit);
+    font-size: 1.05rem;
+    color: var(--primary-dark, #0b2f55);
+    line-height: 1.2;
+}
+
+.trust-item span {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-muted, #64748b);
+}
+
+@media (max-width: 991px) {
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 0;
+    }
+
+    .trust-item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        max-height: 64px;
+    }
+
+    .hero {
+        height: calc(100svh - 190px);
+        min-height: 480px;
+    }
+
+    /* arrows overlapped the text on phones; auto-play + dots-free swipe is enough */
+    .slider-controls {
+        display: none;
+    }
+
+    .slide-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .trust-strip {
+        margin-top: -30px;
+    }
+
+    .trust-grid {
+        padding: 16px 6px;
+    }
+
+    .trust-item {
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .trust-item i {
+        font-size: 1.3rem;
+    }
+
+    .trust-item strong {
+        font-size: 0.92rem;
+    }
+
+    .trust-item span {
+        font-size: 0.74rem;
+    }
+}

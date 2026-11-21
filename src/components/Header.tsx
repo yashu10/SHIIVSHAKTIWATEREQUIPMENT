@@ -227,9 +227,6 @@ export const Header: React.FC = () => {
                 </ul>
               </li>
               <li>
-                <Link href="/export" onClick={closeMobileMenu}>Export</Link>
-              </li>
-              <li>
                 <Link href="/video" onClick={closeMobileMenu}>Video</Link>
               </li>
               <li>
